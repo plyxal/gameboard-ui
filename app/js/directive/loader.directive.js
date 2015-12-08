@@ -20,7 +20,7 @@ define([
                                         '<div class="sk-cube4 sk-cube"></div>' +
                                         '<div class="sk-cube3 sk-cube"></div>' +
                                     '</div>' +
-                                    '<div class="title">GameBoard</div>' +
+                                    //'<div class="title">GameBoard</div>' +
                                 '<div>',
                     replace: true,
                     link: function (scope, element, attributes) {
