@@ -28,6 +28,7 @@ define([
                     var deferred = $q.defer();
 
                     var success = function(result) {
+                        gameModel.selectedGame = result.data[0];
                         gameModel.games = result.data;
                         routeService.createRoutes(result.data);
 

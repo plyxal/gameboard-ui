@@ -21,6 +21,15 @@ define([
 
             function($scope, routeService, initService, gameModel, appModel) {
                 /**
+                 *
+                 */
+                var selectedGameChanged = function(game) {
+                    console.log('appController::selectedGameChanged: ', game);
+                    gameModel.selectedGame = game;
+                    routeService.gotoRoute(game.route);
+                };
+
+                /**
                  * @private
                  */
                 var initComplete = function() {
@@ -41,15 +50,10 @@ define([
                         .then(initComplete);
                 }());
 
-                //$scope.$watch(function() {
-                //    return appModel
-                //}, function(newValue, oldValue) {
-                //
-                //});
-
                 $scope.appModel = appModel;
                 $scope.loading = true;
                 $scope.games = gameModel;
+                $scope.selectedGameChanged = selectedGameChanged;
             }
         ])
     }

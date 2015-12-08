@@ -3,7 +3,8 @@
  */
 define([
         'angularAMD',
-        'angular-css'
+        'angular-css',
+        'js/model/game.model'
     ],
 
     function(angularAMD) {
@@ -12,8 +13,19 @@ define([
         angularAMD.controller('monopolyplusController', [
             '$scope',
             '$css',
+            'serviceLocator',
+            'gameModel',
 
-            function($scope, $css) {
+            function($scope, $css, serviceLocator, gameModel) {
+                var launch = function() {
+                    var result = function(result) {
+                        //$('.stats').html(JSON.stringify(result.data));
+                    };
+
+                    serviceLocator.launch(gameModel.selectedGame.launchCommand)
+                        .then(result);
+                };
+
                 /**
                  * constructor
                  */
@@ -25,6 +37,8 @@ define([
                     //    href: 'games/monopolyplus/assets/css/monopolyplus.css'
                     //}, $scope);
                 }());
+
+                $scope.launch = launch;
             }
         ])
     }

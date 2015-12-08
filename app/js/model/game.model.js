@@ -9,9 +9,11 @@ define([
 
         angularAMD.factory('gameModel', function() {
             var games;
+            var selectedGame;
 
             return {
-                games: games
+                games: games,
+                selectedGame: selectedGame
             }
         })
     }

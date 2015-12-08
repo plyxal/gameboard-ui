@@ -1,13 +1,28 @@
-.stats {
-  position: absolute;
+.monopoly-plus {
+  .stats {
+    position: absolute;
 
-  top: 780px;
-  left: 328px;
+    top: 780px;
+    left: 328px;
 
-  width: 600px;
-  height: 200px;
+    width: 600px;
+    height: 200px;
 
-  color: white;
+    color: white;
 
-  background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  .btn-launch {
+    position: absolute;
+    left: 910px;
+    top: 515px;
+    width: 100px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+  }
 }

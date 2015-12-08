@@ -17,8 +17,14 @@ define([
                     return $http.get(baseUrl + '/game');
                 };
 
+                var launch = function(command) {
+                    console.log('service.locator::launch: ', command);
+                    return $http.post(baseUrl + '/system/launch', {command: command});
+                };
+
                 return {
-                    getGames: getGames
+                    getGames: getGames,
+                    launch: launch
                 }
             }
         ])

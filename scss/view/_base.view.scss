@@ -9,8 +9,6 @@ html, body {
 
   -webkit-user-select: none;
   user-select: none;
-
-  //background-color: white;
 }
 
 .loading-container {
@@ -26,9 +24,6 @@ html, body {
 .app-container {
   width: 100%;
   height: 100%;
-
-  //display: flex;
-  //flex-direction: row;
 }
 
 .view-container {
@@ -41,4 +36,6 @@ html, body {
 .launch-screen {
   position: absolute;
   z-index: -1;
+  width: 1920px;
+  height: 1080px;
 }
