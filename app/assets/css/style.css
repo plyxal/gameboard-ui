@@ -144,6 +144,89 @@ html, body {
   height: 1080px;
 }
 
+/* line 44, ../../../scss/view/_base.view.scss */
+.slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 57, ../../../scss/view/_base.view.scss */
+.slide.ng-enter,
+.slide.ng-leave {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* line 62, ../../../scss/view/_base.view.scss */
+.slide.ng-enter {
+  left: 100%;
+}
+
+/* line 65, ../../../scss/view/_base.view.scss */
+.slide.ng-enter-active {
+  left: 0;
+}
+
+/* line 68, ../../../scss/view/_base.view.scss */
+.slide.ng-leave {
+  left: 0;
+}
+
+/* line 71, ../../../scss/view/_base.view.scss */
+.slide.ng-leave-active {
+  left: -100%;
+}
+
+/* line 76, ../../../scss/view/_base.view.scss */
+.fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 90, ../../../scss/view/_base.view.scss */
+.fade.ng-enter,
+.fade.ng-leave {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* line 95, ../../../scss/view/_base.view.scss */
+.fade.ng-enter {
+  opacity: 0;
+}
+
+/* line 98, ../../../scss/view/_base.view.scss */
+.fade.ng-enter-active {
+  opacity: 1;
+}
+
+/* line 101, ../../../scss/view/_base.view.scss */
+.fade.ng-leave {
+  opacity: 1;
+}
+
+/* line 104, ../../../scss/view/_base.view.scss */
+.fade.ng-leave-active {
+  opacity: 0;
+}
+
 /* line 1, ../../../scss/directive/_side.nav.scss */
 .side-nav {
   width: 228px;
@@ -154,22 +237,23 @@ html, body {
   z-index: 100;
   background-color: rgba(127, 127, 127, 0.5);
 }
-/* line 17, ../../../scss/directive/_side.nav.scss */
+/* line 14, ../../../scss/directive/_side.nav.scss */
 .side-nav .items-container {
   width: 100%;
   height: 100%;
   padding-top: 4px;
   padding-left: 4px;
 }
-/* line 28, ../../../scss/directive/_side.nav.scss */
+/* line 22, ../../../scss/directive/_side.nav.scss */
 .side-nav .item-container {
   width: 220px;
   height: 120px;
   margin: 0 4px 4px 0;
   color: white;
   overflow: hidden;
+  cursor: pointer;
 }
-/* line 42, ../../../scss/directive/_side.nav.scss */
+/* line 35, ../../../scss/directive/_side.nav.scss */
 .side-nav .item {
   width: 220px;
   height: 120px;
@@ -180,7 +264,7 @@ html, body {
   -moz-transition: all .1s ease;
   -o-transition: all .1s ease;
 }
-/* line 57, ../../../scss/directive/_side.nav.scss */
+/* line 50, ../../../scss/directive/_side.nav.scss */
 .side-nav .logo {
   width: 220px;
   height: 120px;
@@ -190,13 +274,13 @@ html, body {
   -o-transition: all .1s ease;
 }
 
-/* line 70, ../../../scss/directive/_side.nav.scss */
+/* line 63, ../../../scss/directive/_side.nav.scss */
 .item-down .item {
   width: 200px;
   height: 100px;
   margin: 10px 0 0 10px;
 }
-/* line 76, ../../../scss/directive/_side.nav.scss */
+/* line 69, ../../../scss/directive/_side.nav.scss */
 .item-down .logo {
   width: 200px;
   height: 109px;

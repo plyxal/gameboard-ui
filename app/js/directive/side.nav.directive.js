@@ -39,7 +39,6 @@ define([
                          *
                          */
                         scope.selectGame = function(game) {
-                            console.log('sideNavDirection::selectGame: ', game);
                             var fn = $parse(scope.selectionChanged);
                             fn({selectedGame: game});
                         };

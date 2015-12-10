@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Gameboard</title>
+    <title>gameboard-ui</title>
 
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -10,12 +10,12 @@
     <script data-main="main.js" src="lib/requirejs/require.js"></script>
 </head>
 <body ng-controller="appController">
-    <div class="loading-container" ng-show="loading">
+    <div class="loading-container" ng-show="appModel.loading">
             <loader></loader>
     </div>
-    <div class="app-container" ng-show="!loading">
-        <side-nav games="games.games" selection-changed="selectedGameChanged(selectedGame)"></side-nav> <!-- ng-show="!appModel.inGame" -->
-        <div class="view-container" ng-view></div>
+    <div class="app-container" ng-show="!appModel.loading">
+        <side-nav games="games.games" selection-changed="selectedGameChanged(selectedGame)"></side-nav>
+        <div class="view-container fade" ng-view></div>
     </div>
 </body>
 </html>

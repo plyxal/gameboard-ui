@@ -8,16 +8,15 @@ define([
     function(angularAMD) {
         'use strict';
 
-        angularAMD.controller('monopolyplusController', [
+        angularAMD.controller('lauragoController', [
             '$scope',
-            'systemService',
 
-            function($scope, systemService) {
+            function($scope) {
                 /**
                  * constructor
                  */
                 (function() {
-                    console.log('monopolyplus.controller::constructor');
+                    console.log('laurago.controller::constructor');
                 }());
             }
         ])

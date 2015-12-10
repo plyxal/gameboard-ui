@@ -8,13 +8,11 @@ define([
         'use strict';
 
         angularAMD.factory('appModel', function() {
-            var loading = false;
-            var inGame = false;
+            var loading = true;
             var $routeProvider;
 
             return {
                 loading: loading,
-                inGame: inGame,
                 $routeProvider: $routeProvider
             }
         })

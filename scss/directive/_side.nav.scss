@@ -1,13 +1,10 @@
 .side-nav {
-  //width: 100%; //vertical
-  //height: 128px; //vertical
-  width: 228px; //horizontal
-  height: 100%; //horizontal
+  width: 228px;
+  height: 100%;
 
   position: absolute;
 
-  top: 0; //horizontal
-  //bottom: 0; //vertical
+  top: 0;
   left: 0;
 
   z-index: 100;
@@ -18,15 +15,12 @@
     width: 100%;
     height: 100%;
 
-    //display: flex; //horizontal
-    //flex-direction: row; //horizontal
-
     padding-top: 4px;
     padding-left: 4px;
   }
 
   .item-container {
-    width: 220px; //vertical
+    width: 220px;
     height: 120px;
 
     margin: 0 4px 4px 0;
@@ -34,18 +28,17 @@
     color: white;
 
     overflow: hidden;
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: space-around;
+
+    cursor: pointer;
   }
 
   .item {
-    //width: calc(100% - 4px); //horizontal
-    width: 220px; //vertical
+    width: 220px;
     height: 120px;
 
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.25);
+
 
     pointer-events: none;
 

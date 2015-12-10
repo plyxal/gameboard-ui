@@ -3,7 +3,9 @@
  */
 define([
         'angularAMD',
-        'js/service/game.service'
+        'js/service/game.service',
+        'js/model/app.model',
+        'js/service/route.service'
     ],
 
     function(angularAMD) {
@@ -12,22 +14,43 @@ define([
         angularAMD.service('initService', [
             '$q',
             'gameService',
+            'appModel',
+            'routeService',
+            '$timeout',
 
-            function($q, gameService) {
+            function($q, gameService, appModel, routeService, $timeout) {
+                /**
+                 *
+                 */
+                var loadGamesList = function() {
+                    return gameService.getGames();
+                };
+
                 /**
                  * @public
                  * @returns {*}
                  */
                 var init = function() {
-                    var deferred = $q.defer();
+                    /**
+                     *
+                     */
+                    var success = function() {
+                        routeService.gotoInitialRoute();
 
-                    var p = [];
-                    p.push(gameService.getGames());
+                        $timeout(function() {
+                            appModel.loading = false;
+                        }, 3000)
+                    };
 
-                    $q.all(p)
-                        .then(deferred.resolve, deferred.reject);
+                    /**
+                     *
+                     */
+                    var fail = function() {
 
-                    return deferred.promise;
+                    };
+
+                    loadGamesList()
+                        .then(success, fail);
                 };
 
                 /**

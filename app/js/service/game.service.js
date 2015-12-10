@@ -3,7 +3,6 @@
  */
 define([
         'angularAMD',
-        'js/model/enum/route.enum',
         'js/locator/service.locator',
         'js/model/game.model',
         'js/service/route.service'
@@ -14,12 +13,11 @@ define([
 
         angularAMD.service('gameService', [
             '$q',
-            'routeEnum',
             'serviceLocator',
             'gameModel',
             'routeService',
 
-            function($q, routeEnum, serviceLocator, gameModel, routeService) {
+            function($q, serviceLocator, gameModel, routeService) {
 
                 /**
                  * @private
