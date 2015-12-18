@@ -26,7 +26,7 @@ define([
                         console.log('system.service::launchGame::fail: ', error);
                     };
 
-                    return serviceLocator.launch(gameModel.selectedGame.launchCommand)
+                    return serviceLocator.launch(gameModel.selectedGame.id)
                         .then(success, fail);
                 };
 

@@ -11,15 +11,27 @@ define([
             '$http',
 
             function($http) {
+                /**
+                 *
+                 * @type {string}
+                 */
                 var baseUrl = 'http://localhost:3000';
 
+                /**
+                 *
+                 * @returns {HttpPromise}
+                 */
                 var getGames = function() {
                     return $http.get(baseUrl + '/game');
                 };
 
-                var launch = function(command) {
-                    console.log('service.locator::launch: ', command);
-                    return $http.post(baseUrl + '/system/launch', {command: command});
+                /**
+                 *
+                 * @param gameId
+                 * @returns {HttpPromise}
+                 */
+                var launch = function(gameId) {
+                    return $http.post(baseUrl + '/system/launch/' + gameId);
                 };
 
                 return {
