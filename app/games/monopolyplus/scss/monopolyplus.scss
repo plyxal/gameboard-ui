@@ -1,3 +1,18 @@
 .monopoly-plus {
+  .btn-launch {
+    position: absolute;
+    left: 910px;
+    top: 980px; //515px;
+    width: 127px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('../images/playbutton.png');
+  }
 }

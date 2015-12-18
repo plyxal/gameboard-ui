@@ -1,0 +1,31 @@
+/* line 2, ../../scss/skylanders.scss */
+.skylanders .stats {
+  position: absolute;
+  top: 100px;
+  left: 328px;
+  width: 600px;
+  height: 200px;
+  padding: 10px 15px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+/* line 18, ../../scss/skylanders.scss */
+.skylanders .stats > li {
+  height: 30px;
+}
+/* line 23, ../../scss/skylanders.scss */
+.skylanders .btn-launch {
+  position: absolute;
+  left: 910px;
+  top: 980px;
+  width: 127px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../images/playbutton.png");
+}

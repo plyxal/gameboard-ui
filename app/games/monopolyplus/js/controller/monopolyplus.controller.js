@@ -2,7 +2,8 @@
  * Created by Paul on 8/11/2015.
  */
 define([
-        'angularAMD'
+        'angularAMD',
+        'js/service/system.service'
     ],
 
     function(angularAMD) {
@@ -14,11 +15,20 @@ define([
 
             function($scope, systemService) {
                 /**
+                 *
+                 */
+                var launchGame = function() {
+                    systemService.launchGame();
+                };
+
+                /**
                  * constructor
                  */
                 (function() {
                     console.log('monopolyplus.controller::constructor');
                 }());
+
+                $scope.launchGame = launchGame;
             }
         ])
     }
