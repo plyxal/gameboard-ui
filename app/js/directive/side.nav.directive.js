@@ -2,7 +2,8 @@
  * Created by Paul on 8/11/2015.
  */
 define([
-        'angularAMD'],
+        'angularAMD',
+        'js/directive/control/plyxal.button.directive'],
 
     function(angularAMD) {
         'use strict';
@@ -18,14 +19,13 @@ define([
                         'selectionChanged': '&selectionChanged'
                     },
                     template:   '<div class="side-nav">' +
-                                    '<div>' +
-                                        '<div class="items-container">' +
-                                            '<div class="item-container" ng-repeat="game in games" ng-click="selectGame(game)" ng-mousedown="mouseDown($event)" ng-mouseup="mouseUp($event)">' +
-                                                '<div class="item">' +
-                                                    '<img class="logo" ng-src="{{game.logoUrl}}"/>' +
-                                                '</div>' +
-                                            '</div>' +
-                                        '</div>' +
+                                    '<div class="nav-container">' +
+                                        '<plyxal-button class="nav-button" ng-repeat="game in games" click-handler="selectGame(game)" image="game.logoUrl"></plyxal-button>' +
+                                    '</div>' +
+                                    '<div class="system-bar">' +
+                                        '<div class="settings"></div>' +
+                                        '<div class="account"></div>' +
+                                        '<div class="store"></div>' +
                                     '</div>' +
                                 '</div>',
                     replace: true,
@@ -39,29 +39,9 @@ define([
                          *
                          */
                         scope.selectGame = function(game) {
+                            console.log('selectGame: ', game);
                             var fn = $parse(scope.selectionChanged);
                             fn({selectedGame: game});
-                        };
-
-                        /**
-                         *
-                         * @param $event
-                         */
-                        scope.mouseDown = function($event) {
-                            downItem = $($event.target);
-                            downItem.addClass('item-down');
-                        };
-
-                        /**
-                         *
-                         * @param event
-                         */
-                        var mouseUp = function(event) {
-                            if(!downItem)
-                                return;
-
-                            downItem.removeClass('item-down');
-                            downItem = null;
                         };
 
                         /**
@@ -69,7 +49,6 @@ define([
                          */
                         (function() {
                             console.log('nav.directive::constructor');
-                            window.addEventListener("mouseup", mouseUp);
                         }())
                     }
                 }

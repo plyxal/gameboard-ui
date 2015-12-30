@@ -3,7 +3,8 @@
  */
 define([
         'angularAMD',
-        'js/service/system.service'
+        'js/service/system.service',
+        'js/directive/control/plyxal.button.directive'
     ],
 
     function(angularAMD) {
@@ -29,6 +30,7 @@ define([
                 }());
 
                 $scope.launchGame = launchGame;
+                $scope.playImage = 'games/skylanders/assets/images/playbutton.png';
             }
         ])
     }

@@ -1,74 +1,75 @@
 .side-nav {
-  width: 228px;
+  width: 230px;
   height: 100%;
 
   position: absolute;
-
   top: 0;
   left: 0;
 
   z-index: 100;
 
-  background-color: rgba(127, 127, 127, 0.5);
+  .nav-container {
+    width: 230px;
+    height: calc(100% - 60px);
 
-  .items-container {
+    padding: 5px;
+
+    background-color: rgba(127, 127, 127, 0.5);
+
+    .nav-button {
+      width: 220px;
+      height: 120px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .system-bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
     width: 100%;
-    height: 100%;
+    height: 60px;
 
-    padding-top: 4px;
-    padding-left: 4px;
-  }
+    padding: 0 5px;
 
-  .item-container {
-    width: 220px;
-    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-    margin: 0 4px 4px 0;
+    border-top: solid 1px rgba(0, 0, 0, 0.25);
 
-    color: white;
+    background-color: rgba(127, 127, 127, 0.5);
+    //background-color: rgba(0, 0, 0, 0.25);
 
-    overflow: hidden;
+    .base-icon {
+      width: 48px;
+      height: 48px;
 
-    cursor: pointer;
-  }
+      background-size: 40px 40px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
 
-  .item {
-    width: 220px;
-    height: 120px;
+    .settings {
+      @extend .base-icon;
 
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.25);
+      background-image: url('../images/settings-icon.png');
+    }
 
+    .account {
+      @extend .base-icon;
 
-    pointer-events: none;
+      margin: 0 20px;
 
-    -webkit-transition: all .1s ease;
-    -moz-transition: all .1s ease;
-    -o-transition: all .1s ease;
-  }
+      background-image: url('../images/account-icon.png');
+    }
 
-  .logo {
-    width: 220px;
-    height: 120px;
+    .store {
+      @extend .base-icon;
 
-    pointer-events: none;
-
-    -webkit-transition: all .1s ease;
-    -moz-transition: all .1s ease;
-    -o-transition: all .1s ease;
-  }
-}
-
-.item-down {
-  .item {
-    width: 200px;
-    height: 100px;
-    margin: 10px 0 0 10px;
-  }
-
-  .logo {
-    width: 200px;
-    height: 109px;
-    margin-top: -5px;
+      background-image: url('../images/store-icon.png');
+    }
   }
 }

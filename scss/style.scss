@@ -1,6 +1,8 @@
 @import 'compass';
 
 @import 'directive/_loader';
+
+@import 'directive/control/plyxal.button';
 @import 'view/base.view';
 
 @import 'directive/side.nav';
