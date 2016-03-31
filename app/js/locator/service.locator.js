@@ -15,7 +15,8 @@ define([
                  *
                  * @type {string}
                  */
-                var baseUrl = 'http://localhost:3000';
+                //var baseUrl = 'http://localhost:3000';
+                var baseUrl = 'http://192.168.0.26:3000';
 
                 /**
                  *
@@ -34,9 +35,19 @@ define([
                     return $http.post(baseUrl + '/system/launch/' + gameId);
                 };
 
+                var getVolume = function() {
+                    return $http.get(baseUrl + '/volume');
+                };
+
+                var putVolume = function(value) {
+                    return $http.put(baseUrl + '/volume/' + value, {});
+                };
+
                 return {
                     getGames: getGames,
-                    launch: launch
+                    launch: launch,
+                    getVolume: getVolume,
+                    putVolume: putVolume
                 }
             }
         ])

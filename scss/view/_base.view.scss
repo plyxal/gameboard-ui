@@ -7,6 +7,9 @@ html, body {
 
   overflow: hidden;
 
+  font-family: oratorStd;
+  font-size: 22px;
+
   -webkit-user-select: none;
   user-select: none;
 }
@@ -54,20 +57,25 @@ html, body {
   -o-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
+
 .slide.ng-enter,
 .slide.ng-leave {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
+
 .slide.ng-enter {
   left: 100%;
 }
+
 .slide.ng-enter-active {
   left: 0;
 }
+
 .slide.ng-leave {
   left: 0;
 }
+
 .slide.ng-leave-active {
   left: -100%;
 }
@@ -87,20 +95,25 @@ html, body {
   -o-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
+
 .fade.ng-enter,
 .fade.ng-leave {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
+
 .fade.ng-enter {
   opacity: 0;
 }
+
 .fade.ng-enter-active {
   opacity: 1;
 }
+
 .fade.ng-leave {
   opacity: 1;
 }
+
 .fade.ng-leave-active {
   opacity: 0;
 }

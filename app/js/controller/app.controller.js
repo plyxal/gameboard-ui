@@ -26,6 +26,10 @@ define([
                     routeService.gotoRoute(game.route);
                 };
 
+                var systemButtonClicked = function(route) {
+                    routeService.gotoRoute(route);
+                };
+
                 /**
                  * constructor
                  */
@@ -35,9 +39,10 @@ define([
 
                 //expose scope props/functions
                 $scope.appModel = appModel;
-                console.log('$scope.appModel: ', $scope.appModel);
                 $scope.games = gameModel;
+
                 $scope.selectedGameChanged = selectedGameChanged;
+                $scope.systemButtonClicked = systemButtonClicked;
             }
         ])
     }

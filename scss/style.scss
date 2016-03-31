@@ -1,8 +1,13 @@
 @import 'compass';
 
-@import 'directive/_loader';
+@import 'common/fonts';
+
+@import 'directive/loader';
 
 @import 'directive/control/plyxal.button';
+@import 'directive/control/rz.slider';
+
 @import 'view/base.view';
+@import 'view/settings.view';
 
 @import 'directive/side.nav';

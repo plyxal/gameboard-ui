@@ -5,7 +5,8 @@ define([
         'angularAMD',
         'js/service/game.service',
         'js/model/app.model',
-        'js/service/route.service'
+        'js/service/route.service',
+        'js/service/settings.service'
     ],
 
     function(angularAMD) {
@@ -17,8 +18,17 @@ define([
             'appModel',
             'routeService',
             '$timeout',
+            'settingsService',
 
-            function($q, gameService, appModel, routeService, $timeout) {
+            function($q, gameService, appModel, routeService, $timeout, settingsService) {
+
+                /**
+                 *
+                 */
+                var loadSettings = function() {
+                    return settingsService.getVolume();
+                };
+
                 /**
                  *
                  */
@@ -37,6 +47,7 @@ define([
                     var success = function() {
                         routeService.gotoInitialRoute();
 
+                        //show loading animation for 3 seconds to allow initial route to load
                         $timeout(function() {
                             appModel.loading = false;
                         }, 3000)
@@ -49,7 +60,8 @@ define([
 
                     };
 
-                    loadGamesList()
+                    loadSettings()
+                        .then(loadGamesList, loadGamesList)
                         .then(success, fail);
                 };
 

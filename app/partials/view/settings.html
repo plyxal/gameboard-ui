@@ -1,0 +1,31 @@
+<div class="settings-view">
+    <div class="background"></div>
+    <div class="content-area">
+        <div class="page-header">Settings</div>
+        <!-- volume -->
+        <div class="section-header">
+            <div class="header-label">Volume : {{settingsModel.volume}}%</div>
+        </div>
+        <div>
+            <div class="section volume-section">
+                <rzslider rz-slider-model="settingsModel.volume" rz-slider-options="sliderSettings"></rzslider>
+            </div>
+        </div>
+
+        <!-- brightness -->
+        <div class="section-header">
+            <div class="header-label">Brightness : 10%</div>
+        </div>
+        <div>
+            <div class="section volume-section">&nbsp;</div>
+        </div>
+
+        <!-- wifi -->
+        <div class="section-header">
+            <div class="header-label">Wi-Fi :: Connection : PKSIV-5g</div>
+        </div>
+        <div>
+            <div class="section wifi-section">Connection: PKSIV-5g</div>
+        </div>
+    </div>
+</div>

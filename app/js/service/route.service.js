@@ -3,7 +3,8 @@
  */
 define([
         'angularAMD',
-        'js/model/game.model'
+        'js/model/game.model',
+        'js/model/enum/routes.enum'
     ],
 
     function(angularAMD) {
@@ -14,8 +15,9 @@ define([
             '$location',
             '$route',
             'gameModel',
+            'routesEnum',
 
-            function($rootScope, $location, $route, gameModel) {
+            function($rootScope, $location, $route, gameModel, routesEnum) {
                 var initialRoute = '';
 
                 var gotoInitialRoute = function() {
@@ -27,6 +29,13 @@ define([
                     _.each(routes, function(item) {
                         window.$routeProvider.when(item.route, angularAMD.route(item));
                     });
+
+                    // static routes
+                    window.$routeProvider.when(routesEnum.ROUTE_SETTINGS, angularAMD.route({
+                        templateUrl: 'partials/view/settings.html',
+                        controller: 'settingsController',
+                        controllerUrl: 'js/controller/settings.controller'
+                    }));
                 };
 
                 var gotoRoute = function(name) {

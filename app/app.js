@@ -18,6 +18,7 @@ define([
         'angular-bootstrap-tpls',
         'angular-animate',
         'angular-css',
+        'angularjs-slider',
 
         'js/controller/app.controller',
         'js/directive/loader.directive',
@@ -31,7 +32,8 @@ define([
             'ngRoute',
             'ui.bootstrap',
             'ngAnimate',
-            'door3.css'
+            'door3.css',
+            'rzModule'
         ], null);
 
         app.config([

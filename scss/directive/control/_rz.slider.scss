@@ -1,0 +1,26 @@
+rzslider {
+  margin: 0;
+}
+
+.rz-bubble {
+  display: none !important;
+}
+
+.rz-pointer {
+  width: 20px !important;
+  height: 40px !important;
+  margin-top: -2px;
+
+  border-radius: 0 !important;
+  background-color: rgba(0, 0, 0 , .5) !important;
+
+  outline: 0 !important;
+}
+
+.rz-pointer::after {
+  display: none;
+}
+
+.rz-bar {
+  display: none;
+}

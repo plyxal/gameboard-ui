@@ -1,0 +1,66 @@
+.settings-view {
+
+  .background {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+
+    z-index: -1;
+
+    background-image: url('../images/logo.png')
+  }
+
+  .content-area {
+    padding: 50px 50px 50px 280px;
+  }
+
+  .section-base {
+    width: auto;
+
+    padding: 10px;
+
+    background-color: rgba(127, 127, 127, 0.5);
+  }
+
+  .page-header {
+    font-size: 32px;
+
+    color: #983333;
+
+    margin: 0px 0px 50px 0px;
+  }
+
+  .section-header {
+    @extend .section-base;
+
+    margin-bottom: 10px;
+
+    display: inline-block;
+
+    color: #983333;
+
+    .header-label {
+      position: relative;
+      top: 4px;
+    }
+  }
+
+  .section {
+    @extend .section-base;
+
+    margin-bottom: 50px;
+
+    display: inline-block;
+
+    color: white;
+  }
+
+  .wifi-section {
+    width: 795px;
+    height: 300px;
+  }
+
+  .volume-section {
+    width: 300px;
+  }
+}

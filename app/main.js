@@ -12,6 +12,7 @@ require.config({
         'angular-bootstrap-tpls': 'lib/angular-bootstrap/ui-bootstrap-tpls.min',
         'angular-animate': 'lib/angular-animate/angular-animate.min',
         'angular-css': 'lib/angular-css/angular-css.min',
+        'angularjs-slider': 'lib/angularjs-slider/dist/rzslider.min',
 
         'tween-max': 'lib/gsap/src/minified/TweenMax.min',
         'timeline-max': 'lib/gsap/src/minified/TimelineMax.min',
