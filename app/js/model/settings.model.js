@@ -9,9 +9,11 @@ define([
 
         angularAMD.factory('settingsModel', function() {
             var volume;
+            var brightness;
 
             return {
-                volume: volume
+                volume: volume,
+                brightness: brightness
             }
         })
     }
