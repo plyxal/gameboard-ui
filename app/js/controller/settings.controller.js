@@ -21,19 +21,25 @@ define([
             'brightnessSliderModel',
 
             function($scope, $timeout, settingsModel, settingsService, volumeSliderModel, brightnessSliderModel) {
-                /**
-                 *
-                 * @param id
-                 * @param value
-                 */
-                var volumeSliderChanged = function(id, value) {
 
+                $scope.doShow = false;
+
+                /**
+                 * bullshit fix for slider taking FOREVER to set it's self. i got build my own -psmithiv
+                 */
+                var show = function() {
+                    $scope.doShow = settingsModel.volume && settingsModel.brightness ? true : false;
+
+                    //needs $timeout to force digest
+                    $timeout(function() {
+                        $scope.$broadcast('rzSliderForceRender');
+                    });
                 };
 
                 /**
                  *
                  */
-                var volumeSliderEnd = function() {
+                var volumeSliderEnd = function(id, value) {
                     settingsService.putVolume(value);
                 };
 
@@ -42,23 +48,21 @@ define([
                  * @param id
                  * @param value
                  */
-                var brightnessSliderChanged = function(id, value) {
-                    console.log('brightnessSliderChanged: ', (value/100));
-                    //TODO: call settingsService.putBrightness(value)
+                var brightnessSliderEnd = function(id, value) {
+                    settingsService.putBrightness(value);
                 };
 
                 /**
                  *
                  * @type {Function}
                  */
-                volumeSliderModel.onChange = volumeSliderChanged;
                 volumeSliderModel.onEnd = volumeSliderEnd;
 
                 /**
                  *
                  * @type {Function}
                  */
-                brightnessSliderModel.onEnd = brightnessSliderChanged;
+                brightnessSliderModel.onEnd = brightnessSliderEnd;
 
                 /**
                  * constructor
@@ -67,14 +71,16 @@ define([
                     console.log('settings.controller::constructor');
 
                     //load settings data
-                    settingsService.getVolume();
+                    settingsService.getVolume()
+                        .then(show);
+                    settingsService.getBrightness()
+                        .then(show);
                 }());
 
                 //expose scope props
                 $scope.volumeSliderModel = volumeSliderModel;
-                $scope.settingsModel = settingsModel;
-                $scope.volumeSliderChanged = volumeSliderChanged;
                 $scope.brightnessSliderModel = brightnessSliderModel;
+                $scope.settingsModel = settingsModel;
             }
         ])
     }

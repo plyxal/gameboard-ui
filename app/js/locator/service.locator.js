@@ -35,19 +35,47 @@ define([
                     return $http.post(baseUrl + '/system/launch/' + gameId);
                 };
 
+                /**
+                 *
+                 * @returns {*}
+                 */
                 var getVolume = function() {
                     return $http.get(baseUrl + '/volume');
                 };
 
+                /**
+                 *
+                 * @param value
+                 * @returns {*}
+                 */
                 var putVolume = function(value) {
                     return $http.put(baseUrl + '/volume/' + value, {});
+                };
+
+                /**
+                 *
+                 * @returns {*}
+                 */
+                var getBrightness = function() {
+                    return $http.get(baseUrl + '/brightness');
+                };
+
+                /**
+                 * 
+                 * @param value
+                 * @returns {*}
+                 */
+                var putBrightness = function(value) {
+                    return $http.put(baseUrl + '/brightness/' + value, {});
                 };
 
                 return {
                     getGames: getGames,
                     launch: launch,
                     getVolume: getVolume,
-                    putVolume: putVolume
+                    putVolume: putVolume,
+                    getBrightness: getBrightness,
+                    putBrightness: putBrightness
                 }
             }
         ])
