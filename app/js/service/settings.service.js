@@ -21,7 +21,6 @@ define([
                  */
                 var getVolume = function() {
                     var success = function(result) {
-                        console.log('settings.service::getVolume::success: ', result);
                         settingsModel.volume = result.data.value;
                     };
 
@@ -33,13 +32,10 @@ define([
                         .then(success, fail);
                 };
 
-                var lastPut;
                 var putVolume = function(value) {
 
                     var success = function(result) {
-                        console.log('settings.service::putVolume::success: ', result);
-
-                        //new Audio('assets/sounds/volume.ding.mp3').play();
+                        new Audio('assets/sounds/volume.ding.mp3').play();
                     };
 
                     var fail = function(error) {
@@ -48,8 +44,6 @@ define([
 
                     serviceLocator.putVolume(value)
                         .then(success, fail);
-
-                    lastPut = new Date();
                 };
 
                 return {

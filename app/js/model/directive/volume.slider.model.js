@@ -12,12 +12,14 @@ define([
             var ceil = 100;
             var hideLimitLabels =  true;
             var showTicks = false;
+            var interval = 500;
 
             return {
                 floor: floor,
                 ceil: ceil,
                 hideLimitLabels: hideLimitLabels,
-                showTicks: showTicks
+                showTicks: showTicks,
+                interval: interval
             }
         })
     }

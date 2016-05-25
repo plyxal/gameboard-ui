@@ -27,7 +27,13 @@ define([
                  * @param value
                  */
                 var volumeSliderChanged = function(id, value) {
-                    console.log('change: ', value);
+
+                };
+
+                /**
+                 *
+                 */
+                var volumeSliderEnd = function() {
                     settingsService.putVolume(value);
                 };
 
@@ -46,6 +52,7 @@ define([
                  * @type {Function}
                  */
                 volumeSliderModel.onChange = volumeSliderChanged;
+                volumeSliderModel.onEnd = volumeSliderEnd;
 
                 /**
                  *
