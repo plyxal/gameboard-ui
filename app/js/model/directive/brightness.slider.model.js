@@ -8,7 +8,7 @@ define([
         'use strict';
 
         angularAMD.factory('brightnessSliderModel', function() {
-            var floor = 10;
+            var floor = 1;
             var ceil = 100;
             var hideLimitLabels =  true;
             var showTicks = false;

@@ -75,11 +75,16 @@ define([
                         .then(success, fail);
                 };
 
+                var getWifiNetworks = function() {
+                    serviceLocator.getWifiNetworks();
+                };
+
                 return {
                     getVolume: getVolume,
                     putVolume: putVolume,
                     getBrightness: getBrightness,
-                    putBrightness: putBrightness
+                    putBrightness: putBrightness,
+                    getWifiNetworks: getWifiNetworks
                 }
             }
         ])

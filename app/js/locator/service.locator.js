@@ -69,13 +69,21 @@ define([
                     return $http.put(baseUrl + '/brightness/' + value, {});
                 };
 
+                /**
+                 *
+                 */
+                var getWifiNetworks = function() {
+                    return $http.get(baseUrl + '/wifi/networks');
+                };
+
                 return {
                     getGames: getGames,
                     launch: launch,
                     getVolume: getVolume,
                     putVolume: putVolume,
                     getBrightness: getBrightness,
-                    putBrightness: putBrightness
+                    putBrightness: putBrightness,
+                    getWifiNetworks: getWifiNetworks
                 }
             }
         ])

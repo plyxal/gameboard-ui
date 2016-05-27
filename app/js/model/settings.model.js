@@ -10,10 +10,12 @@ define([
         angularAMD.factory('settingsModel', function() {
             var volume;
             var brightness;
+            var wifiNetworks;
 
             return {
                 volume: volume,
-                brightness: brightness
+                brightness: brightness,
+                wifiNetworks: wifiNetworks
             }
         })
     }

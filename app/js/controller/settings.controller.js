@@ -49,7 +49,7 @@ define([
                  * @param value
                  */
                 var brightnessSliderEnd = function(id, value) {
-                    settingsService.putBrightness(value);
+                    settingsService.putBrightness(value / 100);
                 };
 
                 /**
@@ -73,8 +73,11 @@ define([
                     //load settings data
                     settingsService.getVolume()
                         .then(show);
+
                     settingsService.getBrightness()
                         .then(show);
+
+                    settingsService.getWifiNetworks();
                 }());
 
                 //expose scope props
