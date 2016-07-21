@@ -30,7 +30,7 @@ define([
                         gameModel.games = result.data;
                         routeService.createRoutes(result.data);
 
-                        deferred.resolve();
+                        deferred.resolve(result.data);
                     };
 
                     serviceLocator.getGames()

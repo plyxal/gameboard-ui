@@ -1,0 +1,34 @@
+{
+  "networks": [
+    {
+      "id": 10001,
+      "name": "wir3Le5s",
+      "secure": true,
+      "signalStrength": 100
+    },
+    {
+      "id": 12875,
+      "name": "pksiv-5g",
+      "secure": true,
+      "signalStrength": 65
+    },
+    {
+      "id": 100234,
+      "name": "free wifi",
+      "secure": false,
+      "signalStrength": 32
+    },
+    {
+      "id": 100020,
+      "name": "0216 - router",
+      "secure": false,
+      "signalStrength": 75
+    },
+    {
+      "id": 100020,
+      "name": "Private Network something",
+      "secure": true,
+      "signalStrength": 99
+    }
+  ]
+}

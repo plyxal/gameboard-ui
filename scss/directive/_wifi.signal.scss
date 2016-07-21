@@ -1,0 +1,80 @@
+.wifi-signal {
+  position: relative;
+
+  width: 300px;
+  height: 70px;
+
+  padding: 10px;
+
+  display: inline-block;
+
+  background-color: rgba(0, 0, 0, 0.25);
+
+  .base-bar {
+    display: inline-block;
+    width: 8px;
+    background-color: white;
+    margin-right: 3px;
+
+    opacity: .5;
+
+    border: solid 0px black;
+    border-radius: 6px;
+  }
+
+  .bar1 {
+    @extend .base-bar;
+
+    margin-top: 40px;
+    height: 10px;
+
+    margin-right: 3px;
+  }
+
+  .bar2 {
+    @extend .base-bar;
+
+    margin-top: 30px;
+    height: 20px;
+  }
+
+  .bar3 {
+    @extend .base-bar;
+
+    margin-top: 20px;
+    height: 30px;
+  }
+
+  .bar4 {
+    @extend .base-bar;
+
+    margin-top: 10px;
+    height: 40px;
+  }
+
+  .bar5 {
+    @extend .base-bar;
+
+    margin-top: 0px;
+    height: 50px;
+  }
+
+  .network-name {
+    position: absolute;
+    width: 195px;
+    left: 75px;
+    top: 10px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .network-secure {
+    position: absolute;
+    left: 75px;
+    bottom: 10px;
+
+    font-size: 16px;
+  }
+}

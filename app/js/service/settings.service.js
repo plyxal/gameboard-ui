@@ -76,7 +76,17 @@ define([
                 };
 
                 var getWifiNetworks = function() {
-                    serviceLocator.getWifiNetworks();
+                    var success = function(result) {
+                        console.log('getWifiNetworks: ', result.data);
+                        settingsModel.wifiNetworks = result.data.networks;
+                    };
+
+                    var fail = function(error) {
+
+                    };
+
+                    return serviceLocator.getWifiNetworks()
+                        .then(success, fail);
                 };
 
                 return {

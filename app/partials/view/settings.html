@@ -24,10 +24,14 @@
 
         <!-- wifi -->
         <div class="section-header">
-            <div class="header-label">Wi-Fi :: Connection : PKSIV-5g</div>
+            <div class="header-label">Wi-Fi : PKSIV-5g</div>
         </div>
         <div>
-            <div class="section wifi-section">Connection: PKSIV-5g</div>
+            <div class="section wifi-section">
+                <div class="network-item" ng-repeat="network in settingsModel.wifiNetworks">
+                    <wifi-signal network="network"></wifi-signal>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -6,7 +6,8 @@ define([
         'js/model/settings.model',
         'js/service/settings.service',
         'js/model/directive/volume.slider.model',
-        'js/model/directive/brightness.slider.model'
+        'js/model/directive/brightness.slider.model',
+        'js/directive/control/wifi.signal.button.directive'
     ],
 
     function(angularAMD) {

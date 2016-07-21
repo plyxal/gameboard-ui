@@ -106,6 +106,69 @@
   color: #666666;
 }
 
+/* line 1, ../../../scss/directive/_wifi.signal.scss */
+.wifi-signal {
+  position: relative;
+  width: 300px;
+  height: 70px;
+  padding: 10px;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+/* line 13, ../../../scss/directive/_wifi.signal.scss */
+.wifi-signal .base-bar, .wifi-signal .bar1, .wifi-signal .bar2, .wifi-signal .bar3, .wifi-signal .bar4, .wifi-signal .bar5 {
+  display: inline-block;
+  width: 8px;
+  background-color: white;
+  margin-right: 3px;
+  opacity: .5;
+  border: solid 0px black;
+  border-radius: 6px;
+}
+/* line 25, ../../../scss/directive/_wifi.signal.scss */
+.wifi-signal .bar1 {
+  margin-top: 40px;
+  height: 10px;
+  margin-right: 3px;
+}
+/* line 34, ../../../scss/directive/_wifi.signal.scss */
+.wifi-signal .bar2 {
+  margin-top: 30px;
+  height: 20px;
+}
+/* line 41, ../../../scss/directive/_wifi.signal.scss */
+.wifi-signal .bar3 {
+  margin-top: 20px;
+  height: 30px;
+}
+/* line 48, ../../../scss/directive/_wifi.signal.scss */
+.wifi-signal .bar4 {
+  margin-top: 10px;
+  height: 40px;
+}
+/* line 55, ../../../scss/directive/_wifi.signal.scss */
+.wifi-signal .bar5 {
+  margin-top: 0px;
+  height: 50px;
+}
+/* line 62, ../../../scss/directive/_wifi.signal.scss */
+.wifi-signal .network-name {
+  position: absolute;
+  width: 195px;
+  left: 75px;
+  top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 73, ../../../scss/directive/_wifi.signal.scss */
+.wifi-signal .network-secure {
+  position: absolute;
+  left: 75px;
+  bottom: 10px;
+  font-size: 16px;
+}
+
 /* line 1, ../../../scss/directive/control/_plyxal.button.scss */
 .plyxal-button {
   position: relative;
@@ -329,10 +392,16 @@ html, body {
 }
 /* line 58, ../../../scss/view/_settings.view.scss */
 .settings-view .wifi-section {
-  width: 795px;
-  height: 300px;
+  width: 980px;
+  height: 290px;
+  padding: 10px;
 }
-/* line 63, ../../../scss/view/_settings.view.scss */
+/* line 64, ../../../scss/view/_settings.view.scss */
+.settings-view .wifi-section .network-item {
+  margin: 10px;
+  display: inline-block;
+}
+/* line 71, ../../../scss/view/_settings.view.scss */
 .settings-view .volume-section {
   width: 300px;
 }

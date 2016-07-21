@@ -55,7 +55,6 @@ define([
                               console.log('internalClickHandler');
 
                             $timeout(function() {
-                                console.log('timed out');
                                 var fn = $parse(scope.clickHandler);
                                 fn();
                             }, 200);

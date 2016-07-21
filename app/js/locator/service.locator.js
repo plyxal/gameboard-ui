@@ -73,7 +73,9 @@ define([
                  *
                  */
                 var getWifiNetworks = function() {
-                    return $http.get(baseUrl + '/wifi/networks');
+                    console.log('!!!!!!!!!! getWifiNetworks');
+                    return $http.get('assets/data/networks.json');
+                    // return $http.get(baseUrl + '/wifi/networks');
                 };
 
                 return {
