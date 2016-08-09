@@ -20,26 +20,26 @@ define([
                                     '<div class="bar3"></div>' +
                                     '<div class="bar4"></div>' +
                                     '<div class="bar5"></div>' +
-                                    '<div class="network-name">{{network.name}}</div>' +
-                                    '<div class="network-secure">{{network.secure ? "Secured" : "Unprotected"}}</div>' +
+                                    '<div class="network-name">{{network.ssid}}</div>' +
+                                    '<div class="network-secure">{{network.security}}</div>' +
                                 '</div>',
                     replace: true,
                     link: function (scope, element, attributes) {
 
                         var setBars = function() {
-                            if(scope.network.signalStrength > 0)
+                            if(scope.network.signal_level > 0)
                                 element.find('.bar1').css({opacity: 1});
 
-                            if(scope.network.signalStrength > 20)
+                            if(scope.network.signal_level > 20)
                                 element.find('.bar2').css({opacity: 1});
 
-                            if(scope.network.signalStrength > 40)
+                            if(scope.network.signal_level > 40)
                                 element.find('.bar3').css({opacity: 1});
 
-                            if(scope.network.signalStrength > 60)
+                            if(scope.network.signal_level > 60)
                                 element.find('.bar4').css({opacity: 1});
 
-                            if(scope.network.signalStrength > 80)
+                            if(scope.network.signal_level > 80)
                                 element.find('.bar5').css({opacity: 1});
                         };
 

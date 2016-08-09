@@ -29,7 +29,7 @@ define([
                  * bullshit fix for slider taking FOREVER to set it's self. i got build my own -psmithiv
                  */
                 var show = function() {
-                    $scope.doShow = settingsModel.volume && settingsModel.brightness ? true : false;
+                    $scope.doShow = true; // settingsModel.volume && settingsModel.brightness ? true : false;
 
                     //needs $timeout to force digest
                     $timeout(function() {

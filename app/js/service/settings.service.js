@@ -23,7 +23,7 @@ define([
                     var success = function(result) {
                         settingsModel.volume = result.data.value;
 
-                        return;
+                        // return;
                     };
 
                     var fail = function(error) {
@@ -77,7 +77,6 @@ define([
 
                 var getWifiNetworks = function() {
                     var success = function(result) {
-                        console.log('getWifiNetworks: ', result.data);
                         settingsModel.wifiNetworks = result.data.networks;
                     };
 
