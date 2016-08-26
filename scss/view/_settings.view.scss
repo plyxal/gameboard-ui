@@ -5,12 +5,11 @@
     width: 1920px;
     height: 1080px;
 
-    z-index: -1;
-
-    background-image: url('../images/logo.png')
+    background-image: url('../images/logo.png');
   }
 
   .content-area {
+    position: absolute;
     padding: 50px 50px 50px 280px;
   }
 

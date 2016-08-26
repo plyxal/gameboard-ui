@@ -38,7 +38,6 @@ html, body {
 
 .launch-screen {
   position: absolute;
-  z-index: -1;
   width: 1920px;
   height: 1080px;
 }
@@ -86,34 +85,43 @@ html, body {
   top: 0;
   left: 0;
   right: 0;
-  height: 100%;
+
+  width: 1920px;
+  height: 1080px;
+
   opacity: 1;
+
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  -o-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }
 
 .fade.ng-enter,
 .fade.ng-leave {
-  -webkit-transform: translate3d(0,0,0);
+
 }
 
 .fade.ng-enter {
-  opacity: 0;
+  opacity: 1;
+
+  //transition: opacity 0s ease;
+  //transition-delay: 0s;
 }
 
 .fade.ng-enter-active {
   opacity: 1;
-
-  transition: opacity 0s ease;
-  transition-delay: .1s;
 }
 
 .fade.ng-leave {
   opacity: 1;
-  z-index: -1;
+  //z-index: -1;
+
+  transition: opacity .01s ease;
+  transition-delay: 2s;
 }
 
 .fade.ng-leave-active {
   opacity: 1;
-
-  transition: opacity .1s ease;
-  transition-delay: 5s;
 }

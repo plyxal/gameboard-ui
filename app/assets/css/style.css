@@ -261,12 +261,11 @@ html, body {
 /* line 39, ../../../scss/view/_base.view.scss */
 .launch-screen {
   position: absolute;
-  z-index: -1;
   width: 1920px;
   height: 1080px;
 }
 
-/* line 47, ../../../scss/view/_base.view.scss */
+/* line 46, ../../../scss/view/_base.view.scss */
 .slide {
   position: absolute;
   left: 0;
@@ -280,72 +279,69 @@ html, body {
   transform: translate3d(0, 0, 0);
 }
 
-/* line 61, ../../../scss/view/_base.view.scss */
+/* line 60, ../../../scss/view/_base.view.scss */
 .slide.ng-enter,
 .slide.ng-leave {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
-/* line 67, ../../../scss/view/_base.view.scss */
+/* line 66, ../../../scss/view/_base.view.scss */
 .slide.ng-enter {
   left: 100%;
 }
 
-/* line 71, ../../../scss/view/_base.view.scss */
+/* line 70, ../../../scss/view/_base.view.scss */
 .slide.ng-enter-active {
   left: 0;
 }
 
-/* line 75, ../../../scss/view/_base.view.scss */
+/* line 74, ../../../scss/view/_base.view.scss */
 .slide.ng-leave {
   left: 0;
 }
 
-/* line 79, ../../../scss/view/_base.view.scss */
+/* line 78, ../../../scss/view/_base.view.scss */
 .slide.ng-leave-active {
   left: -100%;
 }
 
-/* line 84, ../../../scss/view/_base.view.scss */
+/* line 83, ../../../scss/view/_base.view.scss */
 .fade {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  width: 1920px;
+  height: 1080px;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 106, ../../../scss/view/_base.view.scss */
+.fade.ng-enter {
   opacity: 1;
 }
 
-/* line 93, ../../../scss/view/_base.view.scss */
-.fade.ng-enter,
-.fade.ng-leave {
-  -webkit-transform: translate3d(0, 0, 0);
-}
-
-/* line 98, ../../../scss/view/_base.view.scss */
-.fade.ng-enter {
-  opacity: 0;
-}
-
-/* line 102, ../../../scss/view/_base.view.scss */
+/* line 113, ../../../scss/view/_base.view.scss */
 .fade.ng-enter-active {
   opacity: 1;
-  transition: opacity 0s ease;
-  transition-delay: .1s;
 }
 
-/* line 109, ../../../scss/view/_base.view.scss */
+/* line 117, ../../../scss/view/_base.view.scss */
 .fade.ng-leave {
   opacity: 1;
-  z-index: -1;
+  transition: opacity .01s ease;
+  transition-delay: 2s;
 }
 
-/* line 114, ../../../scss/view/_base.view.scss */
+/* line 125, ../../../scss/view/_base.view.scss */
 .fade.ng-leave-active {
   opacity: 1;
-  transition: opacity .1s ease;
-  transition-delay: 5s;
 }
 
 /* line 3, ../../../scss/view/_settings.view.scss */
@@ -353,54 +349,54 @@ html, body {
   position: absolute;
   width: 1920px;
   height: 1080px;
-  z-index: -1;
   background-image: url("../images/logo.png");
 }
-/* line 13, ../../../scss/view/_settings.view.scss */
+/* line 11, ../../../scss/view/_settings.view.scss */
 .settings-view .content-area {
+  position: absolute;
   padding: 50px 50px 50px 280px;
 }
-/* line 17, ../../../scss/view/_settings.view.scss */
+/* line 16, ../../../scss/view/_settings.view.scss */
 .settings-view .section-base, .settings-view .section-header, .settings-view .section {
   width: auto;
   padding: 10px;
   background-color: rgba(127, 127, 127, 0.5);
 }
-/* line 25, ../../../scss/view/_settings.view.scss */
+/* line 24, ../../../scss/view/_settings.view.scss */
 .settings-view .page-header {
   font-size: 32px;
   color: #983333;
   margin: 0px 0px 50px 0px;
 }
-/* line 33, ../../../scss/view/_settings.view.scss */
+/* line 32, ../../../scss/view/_settings.view.scss */
 .settings-view .section-header {
   margin-bottom: 10px;
   display: inline-block;
   color: #983333;
 }
-/* line 42, ../../../scss/view/_settings.view.scss */
+/* line 41, ../../../scss/view/_settings.view.scss */
 .settings-view .section-header .header-label {
   position: relative;
   top: 4px;
 }
-/* line 48, ../../../scss/view/_settings.view.scss */
+/* line 47, ../../../scss/view/_settings.view.scss */
 .settings-view .section {
   margin-bottom: 50px;
   display: inline-block;
   color: white;
 }
-/* line 58, ../../../scss/view/_settings.view.scss */
+/* line 57, ../../../scss/view/_settings.view.scss */
 .settings-view .wifi-section {
   width: 980px;
   height: 290px;
   padding: 10px;
 }
-/* line 64, ../../../scss/view/_settings.view.scss */
+/* line 63, ../../../scss/view/_settings.view.scss */
 .settings-view .wifi-section .network-item {
   margin: 10px;
   display: inline-block;
 }
-/* line 71, ../../../scss/view/_settings.view.scss */
+/* line 70, ../../../scss/view/_settings.view.scss */
 .settings-view .volume-section {
   width: 300px;
 }

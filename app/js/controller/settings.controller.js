@@ -24,7 +24,7 @@ define([
             function($scope, $timeout, settingsModel, settingsService, volumeSliderModel, brightnessSliderModel) {
 
                 /**
-                 * bullshit fix for slider taking FOREVER to set it's self. i got build my own -psmithiv
+                 * bullshit fix for slider taking FOREVER to set it's self. i gota build my own -psmithiv
                  */
                 var refreshSliders = function() {
                     //needs $timeout to force digest
