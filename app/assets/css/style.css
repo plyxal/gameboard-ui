@@ -112,8 +112,9 @@
   width: 300px;
   height: 70px;
   display: inline-block;
+  cursor: pointer;
 }
-/* line 9, ../../../scss/directive/_wifi.signal.scss */
+/* line 11, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .wifi-signal-inner {
   position: relative;
   width: 300px;
@@ -125,11 +126,11 @@
   -o-transition: all .1s ease-out;
   background-color: rgba(0, 0, 0, 0.25);
 }
-/* line 26, ../../../scss/directive/_wifi.signal.scss */
+/* line 28, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .interaction-start {
   transform: scale(0.85, 0.85);
 }
-/* line 30, ../../../scss/directive/_wifi.signal.scss */
+/* line 32, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .base-bar, .wifi-signal .bar1, .wifi-signal .bar2, .wifi-signal .bar3, .wifi-signal .bar4, .wifi-signal .bar5 {
   display: inline-block;
   width: 8px;
@@ -139,33 +140,33 @@
   border: solid 0px black;
   border-radius: 6px;
 }
-/* line 42, ../../../scss/directive/_wifi.signal.scss */
+/* line 44, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .bar1 {
   margin-top: 40px;
   height: 10px;
   margin-right: 3px;
 }
-/* line 51, ../../../scss/directive/_wifi.signal.scss */
+/* line 53, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .bar2 {
   margin-top: 30px;
   height: 20px;
 }
-/* line 58, ../../../scss/directive/_wifi.signal.scss */
+/* line 60, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .bar3 {
   margin-top: 20px;
   height: 30px;
 }
-/* line 65, ../../../scss/directive/_wifi.signal.scss */
+/* line 67, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .bar4 {
   margin-top: 10px;
   height: 40px;
 }
-/* line 72, ../../../scss/directive/_wifi.signal.scss */
+/* line 74, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .bar5 {
   margin-top: 0px;
   height: 50px;
 }
-/* line 79, ../../../scss/directive/_wifi.signal.scss */
+/* line 81, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .network-name {
   position: absolute;
   width: 195px;
@@ -175,7 +176,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 90, ../../../scss/directive/_wifi.signal.scss */
+/* line 92, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .network-secure {
   position: absolute;
   left: 70px;
@@ -186,10 +187,11 @@
 /* line 1, ../../../scss/directive/control/_plyxal.button.scss */
 .plyxal-button {
   position: relative;
-  width: 100%;
+  width: auto;
   height: 100%;
+  cursor: pointer;
 }
-/* line 7, ../../../scss/directive/control/_plyxal.button.scss */
+/* line 9, ../../../scss/directive/control/_plyxal.button.scss */
 .plyxal-button .plyxal-button-inner {
   width: 100%;
   height: 100%;
@@ -201,7 +203,7 @@
   -moz-transition: all .1s ease-out;
   -o-transition: all .1s ease-out;
 }
-/* line 22, ../../../scss/directive/control/_plyxal.button.scss */
+/* line 24, ../../../scss/directive/control/_plyxal.button.scss */
 .plyxal-button .interaction-start {
   transform: scale(0.85, 0.85);
 }
@@ -419,6 +421,38 @@ html, body {
 /* line 73, ../../../scss/view/_settings.view.scss */
 .settings-view .volume-section {
   width: 300px;
+}
+
+/* line 1, ../../../scss/modal/_base.modal.scss */
+.modal-backdrop {
+  opacity: 0 !important;
+}
+
+/* line 5, ../../../scss/modal/_base.modal.scss */
+.modal {
+  border-radius: 0 !important;
+  border: none;
+}
+
+/* line 10, ../../../scss/modal/_base.modal.scss */
+.modal-content {
+  border-radius: 0 !important;
+  -webkit-box-shadow: 0 3px 9px transparent;
+  box-shadow: 0 3px 9px transparent;
+}
+
+/* line 1, ../../../scss/modal/_wifi.modal.scss */
+.wifi-modal {
+  background: rgba(127, 127, 127, 0.5);
+}
+/* line 4, ../../../scss/modal/_wifi.modal.scss */
+.wifi-modal .plyxal-button {
+  display: inline-block;
+}
+/* line 8, ../../../scss/modal/_wifi.modal.scss */
+.wifi-modal .plyxal-button-inner {
+  padding: 10px;
+  color: white;
 }
 
 /* line 1, ../../../scss/directive/_side.nav.scss */

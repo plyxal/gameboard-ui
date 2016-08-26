@@ -7,7 +7,8 @@ define([
         'js/service/settings.service',
         'js/model/directive/volume.slider.model',
         'js/model/directive/brightness.slider.model',
-        'js/directive/control/wifi.signal.button.directive'
+        'js/directive/control/wifi.signal.button.directive',
+        'js/service/modal.service'
     ],
 
     function(angularAMD) {
@@ -20,8 +21,9 @@ define([
             'settingsService',
             'volumeSliderModel',
             'brightnessSliderModel',
+            'modalService',
 
-            function($scope, $timeout, settingsModel, settingsService, volumeSliderModel, brightnessSliderModel) {
+            function($scope, $timeout, settingsModel, settingsService, volumeSliderModel, brightnessSliderModel, modalService) {
 
                 /**
                  * bullshit fix for slider taking FOREVER to set it's self. i gota build my own -psmithiv
@@ -51,6 +53,7 @@ define([
 
                 var wifiClickHandler = function(network) {
                     console.log('wifiClickHandler: ', network);
+                    modalService.showWifiConnectionModal();
                 };
 
                 volumeSliderModel.onEnd = volumeSliderEnd;

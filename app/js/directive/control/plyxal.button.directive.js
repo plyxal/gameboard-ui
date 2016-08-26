@@ -16,11 +16,12 @@ define([
                 return {
                     restrict: 'E',
                     scope: {
-                        'image': '=image',
-                        'clickHandler': '&clickHandler'
+                        'image': '=?image',
+                        'clickHandler': '&clickHandler',
+                        'label': '=?label'
                     },
                     template:   '<div class="plyxal-button">' +
-                                    '<div class="plyxal-button-inner" ng-click="internalClickHandler($event)" style="background-image: url(\'{{image}}\')"></div>' +
+                                    '<div class="plyxal-button-inner" ng-click="internalClickHandler($event)" style="background-image: url(\'{{image}}\')">{{label}}</div>' +
                                 '</div>',
                     replace: true,
                     link: function (scope, element, attributes) {

@@ -11,4 +11,7 @@
 @import 'view/base.view';
 @import 'view/settings.view';
 
+@import 'modal/_base.modal';
+@import 'modal/_wifi.modal';
+
 @import 'directive/side.nav';

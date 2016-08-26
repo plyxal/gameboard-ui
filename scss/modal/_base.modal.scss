@@ -1,0 +1,14 @@
+.modal-backdrop {
+  opacity: 0 !important;
+}
+
+.modal {
+  border-radius: 0 !important;
+  border: none;
+}
+
+.modal-content {
+  border-radius: 0 !important;
+  -webkit-box-shadow: 0 3px 9px rgba(0,0,0,0);
+  box-shadow: 0 3px 9px rgba(0,0,0,0);
+}

@@ -1,8 +1,10 @@
 .plyxal-button {
   position: relative;
 
-  width: 100%;
+  width: auto;
   height: 100%;
+
+  cursor: pointer;
 
   .plyxal-button-inner {
     width: 100%;
