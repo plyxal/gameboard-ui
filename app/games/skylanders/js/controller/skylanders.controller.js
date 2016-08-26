@@ -26,7 +26,7 @@ define([
                  * constructor
                  */
                 (function() {
-                    console.log('skylanders.controller::constructor');
+                    // console.log('skylanders.controller::constructor');
                 }());
 
                 $scope.launchGame = launchGame;

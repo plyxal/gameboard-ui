@@ -26,7 +26,18 @@ define([
                  *
                  */
                 var loadSettings = function() {
-                    return settingsService.getVolume();
+                    var deferred = $q.defer();
+
+                    var done = function() {
+                        deferred.resolve();
+                    };
+
+                    settingsService.getVolume()
+                        .then(settingsService.getBrightness, settingsService.getBrightness)
+                        .then(settingsService.getWifiNetworks, settingsService.getWifiNetworks)
+                        .then(done, done);
+
+                    return deferred.promise;
                 };
 
                 /**

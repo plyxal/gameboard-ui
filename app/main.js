@@ -43,6 +43,9 @@ require.config({
         'angular-css': {
             deps: ['angular', 'angular-route']
         },
+        'tween-max': {
+            exports: 'TweenMax'
+        },
         'timeline-max' : ['tween-max'],
         'd3': {
             exports: 'd3'

@@ -47,7 +47,7 @@ define([
                         };
 
                         var sysbarButtonClicked = function(route) {
-                            console.log('sysbarButtonClicked::route: ', route);
+                            // console.log('sysbarButtonClicked::route: ', route);
                             var fn = $parse(scope.systemButtonClicked);
                             fn({route: route});
                         };
@@ -60,7 +60,7 @@ define([
                          * @constructor
                          */
                         (function() {
-                            console.log('nav.directive::constructor');
+                            // console.log('nav.directive::constructor');
                         }())
                     }
                 }

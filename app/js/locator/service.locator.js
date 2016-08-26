@@ -16,7 +16,7 @@ define([
                  * @type {string}
                  */
                 // var baseUrl = 'http://localhost:3000';
-                var baseUrl = 'http://192.168.0.19:3000';
+                var baseUrl = 'http://192.168.0.28:3000';
 
                 /**
                  *

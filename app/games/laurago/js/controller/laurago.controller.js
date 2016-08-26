@@ -16,7 +16,7 @@ define([
                  * constructor
                  */
                 (function() {
-                    console.log('laurago.controller::constructor');
+                    // console.log('laurago.controller::constructor');
                 }());
             }
         ])

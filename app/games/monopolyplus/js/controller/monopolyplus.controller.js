@@ -26,7 +26,7 @@ define([
                  * constructor
                  */
                 (function() {
-                    console.log('monopolyplus.controller::constructor');
+                    // console.log('monopolyplus.controller::constructor');
                 }());
 
                 $scope.launchGame = launchGame;

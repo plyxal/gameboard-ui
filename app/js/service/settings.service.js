@@ -63,15 +63,18 @@ define([
                 };
 
                 var putBrightness = function(value) {
+                    var adj = d3.scale.linear().domain([0, 100]).range([.25, 1])(value);
+                    adj = Math.round(adj * 100) / 100;
+
                     var success = function(result) {
-                        console.log('settings.controller::putBrightness::value: ', result.data.value);
+                        // console.log('settings.controller::putBrightness::value: ', result.data.value);
                     };
 
                     var fail = function(error) {
                         console.log('settings.service::putBrightness::fail: ', error);
                     };
 
-                    serviceLocator.putBrightness(value)
+                    serviceLocator.putBrightness(adj)
                         .then(success, fail);
                 };
 

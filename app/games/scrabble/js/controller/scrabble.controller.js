@@ -16,7 +16,7 @@ define([
                  * constructor
                  */
                 (function() {
-                    console.log('scrabble.controller::constructor');
+                    // console.log('scrabble.controller::constructor');
                 }());
             }
         ])

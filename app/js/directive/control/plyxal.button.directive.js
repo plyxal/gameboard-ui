@@ -45,14 +45,14 @@ define([
                          * @param event
                          */
                         var interactionStart = function(event) {
-                            console.log('button.directive::touchStartHander::event: ', event);
+                            // console.log('button.directive::touchStartHander::event: ', event);
 
                             inner.addClass('interaction-start');
                             $(element).bind('touchend', interactionEnd);
                         };
 
                         var internalClickHandler = function(event) {
-                              console.log('internalClickHandler');
+                              // console.log('internalClickHandler');
 
                             $timeout(function() {
                                 var fn = $parse(scope.clickHandler);
@@ -68,7 +68,7 @@ define([
                          * @constructor
                          */
                         (function() {
-                            console.log('button.directive::constructor');
+                            // console.log('button.directive::constructor');
 
                             $(element).bind('touchstart', interactionStart);
                         }())

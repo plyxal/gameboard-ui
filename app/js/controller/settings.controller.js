@@ -23,14 +23,10 @@ define([
 
             function($scope, $timeout, settingsModel, settingsService, volumeSliderModel, brightnessSliderModel) {
 
-                $scope.doShow = false;
-
                 /**
                  * bullshit fix for slider taking FOREVER to set it's self. i got build my own -psmithiv
                  */
-                var show = function() {
-                    $scope.doShow = true; // settingsModel.volume && settingsModel.brightness ? true : false;
-
+                var refreshSliders = function() {
                     //needs $timeout to force digest
                     $timeout(function() {
                         $scope.$broadcast('rzSliderForceRender');
@@ -50,7 +46,7 @@ define([
                  * @param value
                  */
                 var brightnessSliderEnd = function(id, value) {
-                    settingsService.putBrightness(value / 100);
+                    settingsService.putBrightness(value)
                 };
 
                 /**
@@ -73,12 +69,9 @@ define([
 
                     //load settings data
                     settingsService.getVolume()
-                        .then(show);
-
-                    settingsService.getBrightness()
-                        .then(show);
-
-                    settingsService.getWifiNetworks();
+                        .then(settingsService.getBrightness)
+                        .then(refreshSliders)
+                        .then(settingsService.getWifiNetworks);
                 }());
 
                 //expose scope props
