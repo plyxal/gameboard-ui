@@ -49,6 +49,7 @@ define([
 
                             inner.addClass('interaction-start');
                             $(element).bind('touchend', interactionEnd);
+                            $(element).bind('mouseup', interactionEnd);
                         };
 
                         var internalClickHandler = function(event) {
@@ -71,6 +72,7 @@ define([
                             // console.log('button.directive::constructor');
 
                             $(element).bind('touchstart', interactionStart);
+                            $(element).bind('mousedown', interactionStart);
                         }())
                     }
                 }

@@ -29,7 +29,7 @@
         <div>
             <div class="section wifi-section">
                 <div class="network-item" ng-repeat="network in settingsModel.wifiNetworks">
-                    <wifi-signal network="network"></wifi-signal>
+                    <wifi-signal network="network" click-handler="wifiClickHandler(network)"></wifi-signal>
                 </div>
             </div>
         </div>

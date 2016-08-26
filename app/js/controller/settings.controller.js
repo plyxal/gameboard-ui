@@ -49,17 +49,14 @@ define([
                     settingsService.putBrightness(value)
                 };
 
-                /**
-                 *
-                 * @type {Function}
-                 */
-                volumeSliderModel.onEnd = volumeSliderEnd;
+                var wifiClickHandler = function(network) {
+                    console.log('wifiClickHandler: ', network);
+                };
 
-                /**
-                 *
-                 * @type {Function}
-                 */
+                volumeSliderModel.onEnd = volumeSliderEnd;
                 brightnessSliderModel.onEnd = brightnessSliderEnd;
+
+                $scope.wifiClickHandler = wifiClickHandler;
 
                 /**
                  * constructor

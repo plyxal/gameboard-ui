@@ -111,11 +111,25 @@
   position: relative;
   width: 300px;
   height: 70px;
-  padding: 10px;
   display: inline-block;
+}
+/* line 9, ../../../scss/directive/_wifi.signal.scss */
+.wifi-signal .wifi-signal-inner {
+  position: relative;
+  width: 300px;
+  height: 70px;
+  padding: 10px;
+  transform: translateZ(0);
+  -webkit-transition: all .1s ease-out;
+  -moz-transition: all .1s ease-out;
+  -o-transition: all .1s ease-out;
   background-color: rgba(0, 0, 0, 0.25);
 }
-/* line 13, ../../../scss/directive/_wifi.signal.scss */
+/* line 26, ../../../scss/directive/_wifi.signal.scss */
+.wifi-signal .interaction-start {
+  transform: scale(0.85, 0.85);
+}
+/* line 30, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .base-bar, .wifi-signal .bar1, .wifi-signal .bar2, .wifi-signal .bar3, .wifi-signal .bar4, .wifi-signal .bar5 {
   display: inline-block;
   width: 8px;
@@ -125,47 +139,47 @@
   border: solid 0px black;
   border-radius: 6px;
 }
-/* line 25, ../../../scss/directive/_wifi.signal.scss */
+/* line 42, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .bar1 {
   margin-top: 40px;
   height: 10px;
   margin-right: 3px;
 }
-/* line 34, ../../../scss/directive/_wifi.signal.scss */
+/* line 51, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .bar2 {
   margin-top: 30px;
   height: 20px;
 }
-/* line 41, ../../../scss/directive/_wifi.signal.scss */
+/* line 58, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .bar3 {
   margin-top: 20px;
   height: 30px;
 }
-/* line 48, ../../../scss/directive/_wifi.signal.scss */
+/* line 65, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .bar4 {
   margin-top: 10px;
   height: 40px;
 }
-/* line 55, ../../../scss/directive/_wifi.signal.scss */
+/* line 72, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .bar5 {
   margin-top: 0px;
   height: 50px;
 }
-/* line 62, ../../../scss/directive/_wifi.signal.scss */
+/* line 79, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .network-name {
   position: absolute;
   width: 195px;
-  left: 75px;
-  top: 10px;
+  left: 70px;
+  top: 12px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 73, ../../../scss/directive/_wifi.signal.scss */
+/* line 90, ../../../scss/directive/_wifi.signal.scss */
 .wifi-signal .network-secure {
   position: absolute;
-  left: 75px;
-  bottom: 10px;
+  left: 70px;
+  bottom: 8px;
   font-size: 16px;
 }
 
@@ -325,6 +339,7 @@ html, body {
 /* line 106, ../../../scss/view/_base.view.scss */
 .fade.ng-enter {
   opacity: 1;
+  z-index: -1;
 }
 
 /* line 113, ../../../scss/view/_base.view.scss */
@@ -335,7 +350,7 @@ html, body {
 /* line 117, ../../../scss/view/_base.view.scss */
 .fade.ng-leave {
   opacity: 1;
-  transition: opacity .01s ease;
+  transition: opacity .1s ease;
   transition-delay: 2s;
 }
 
@@ -344,59 +359,64 @@ html, body {
   opacity: 1;
 }
 
-/* line 3, ../../../scss/view/_settings.view.scss */
+/* line 1, ../../../scss/view/_settings.view.scss */
+.settings-view {
+  width: 1920px;
+}
+/* line 5, ../../../scss/view/_settings.view.scss */
 .settings-view .background {
   position: absolute;
   width: 1920px;
   height: 1080px;
   background-image: url("../images/logo.png");
 }
-/* line 11, ../../../scss/view/_settings.view.scss */
+/* line 13, ../../../scss/view/_settings.view.scss */
 .settings-view .content-area {
   position: absolute;
+  width: 1920px;
   padding: 50px 50px 50px 280px;
 }
-/* line 16, ../../../scss/view/_settings.view.scss */
+/* line 19, ../../../scss/view/_settings.view.scss */
 .settings-view .section-base, .settings-view .section-header, .settings-view .section {
   width: auto;
   padding: 10px;
   background-color: rgba(127, 127, 127, 0.5);
 }
-/* line 24, ../../../scss/view/_settings.view.scss */
+/* line 27, ../../../scss/view/_settings.view.scss */
 .settings-view .page-header {
   font-size: 32px;
   color: #983333;
   margin: 0px 0px 50px 0px;
 }
-/* line 32, ../../../scss/view/_settings.view.scss */
+/* line 35, ../../../scss/view/_settings.view.scss */
 .settings-view .section-header {
   margin-bottom: 10px;
   display: inline-block;
   color: #983333;
 }
-/* line 41, ../../../scss/view/_settings.view.scss */
+/* line 44, ../../../scss/view/_settings.view.scss */
 .settings-view .section-header .header-label {
   position: relative;
   top: 4px;
 }
-/* line 47, ../../../scss/view/_settings.view.scss */
+/* line 50, ../../../scss/view/_settings.view.scss */
 .settings-view .section {
   margin-bottom: 50px;
   display: inline-block;
   color: white;
 }
-/* line 57, ../../../scss/view/_settings.view.scss */
+/* line 60, ../../../scss/view/_settings.view.scss */
 .settings-view .wifi-section {
   width: 980px;
   height: 290px;
   padding: 10px;
 }
-/* line 63, ../../../scss/view/_settings.view.scss */
+/* line 66, ../../../scss/view/_settings.view.scss */
 .settings-view .wifi-section .network-item {
   margin: 10px;
   display: inline-block;
 }
-/* line 70, ../../../scss/view/_settings.view.scss */
+/* line 73, ../../../scss/view/_settings.view.scss */
 .settings-view .volume-section {
   width: 300px;
 }
