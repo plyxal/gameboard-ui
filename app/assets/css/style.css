@@ -437,38 +437,51 @@ html, body {
 
 /* line 1, ../../../scss/modal/_base.modal.scss */
 .modal-backdrop {
-  opacity: 0 !important;
+  opacity: .25 !important;
+  background: black !important;
 }
 
-/* line 5, ../../../scss/modal/_base.modal.scss */
+/* line 6, ../../../scss/modal/_base.modal.scss */
 .modal {
   border-radius: 0 !important;
   border: none;
 }
 
-/* line 10, ../../../scss/modal/_base.modal.scss */
+/* line 13, ../../../scss/modal/_base.modal.scss */
+.modal-dialog {
+  margin: auto;
+}
+
+/* line 18, ../../../scss/modal/_base.modal.scss */
+.modal-header {
+  padding-bottom: 5px;
+}
+
+/* line 22, ../../../scss/modal/_base.modal.scss */
 .modal-content {
   border-radius: 0 !important;
   -webkit-box-shadow: 0 3px 9px transparent;
   box-shadow: 0 3px 9px transparent;
 }
 
-/* line 1, ../../../scss/modal/_wifi.modal.scss */
-.wifi-modal {
-  background: rgba(127, 127, 127, 0.5);
-}
-/* line 4, ../../../scss/modal/_wifi.modal.scss */
+/* line 2, ../../../scss/modal/_wifi.modal.scss */
 .wifi-modal .connect-to-container {
   margin-bottom: 10px;
 }
-/* line 8, ../../../scss/modal/_wifi.modal.scss */
+/* line 6, ../../../scss/modal/_wifi.modal.scss */
 .wifi-modal .plyxal-button {
   display: inline-block;
 }
-/* line 12, ../../../scss/modal/_wifi.modal.scss */
+/* line 10, ../../../scss/modal/_wifi.modal.scss */
 .wifi-modal .plyxal-button-inner {
   padding: 10px 10px 5px 10px;
   color: white;
+  background-color: #909090;
+}
+
+/* line 17, ../../../scss/modal/_wifi.modal.scss */
+.modal-content {
+  margin-top: 405px;
 }
 
 /* line 1, ../../../scss/directive/_side.nav.scss */

@@ -1,6 +1,4 @@
 .wifi-modal {
-  background: rgba(127, 127, 127, 0.5);
-
   .connect-to-container {
     margin-bottom: 10px;
   }
@@ -12,5 +10,12 @@
   .plyxal-button-inner {
     padding: 10px 10px 5px 10px;
     color: white;
+    background-color: #909090;
   }
+}
+
+.modal-content {
+  margin-top: 405px;
+  //position: relative;
+  //top: 403px !important;
 }

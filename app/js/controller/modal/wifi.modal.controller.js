@@ -35,7 +35,7 @@ define([
                  * constructor
                  */
                 (function() {
-                    console.log('wifiModalController: ', wifiNetwork);
+                    console.log('wifi.modal.controller:constructor');
                 }());
             }
         ])

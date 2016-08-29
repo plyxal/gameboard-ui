@@ -1,10 +1,22 @@
 .modal-backdrop {
-  opacity: 0 !important;
+  opacity: .25 !important;
+  background: black !important;
 }
 
 .modal {
+  //height: 100%;
+
   border-radius: 0 !important;
   border: none;
+}
+
+.modal-dialog {
+  //height: 100%;
+  margin: auto;
+}
+
+.modal-header {
+  padding-bottom: 5px;
 }
 
 .modal-content {

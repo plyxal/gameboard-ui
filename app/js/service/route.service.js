@@ -27,7 +27,6 @@ define([
 
                 var createRoutes = function(routes) {
                     _.each(routes, function(item) {
-                        console.log('item: ', item);
                         window.$routeProvider.when(item.route, angularAMD.route(item));
                     });
 
