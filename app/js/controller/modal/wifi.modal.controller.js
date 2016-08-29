@@ -11,9 +11,32 @@ define([
 
         angularAMD.controller('wifiModalController', [
             '$scope',
+            '$modalInstance',
+            'wifiNetwork',
 
-            function($scope) {
-                console.log('wifiModalController');
+            function($scope, $modalInstance, wifiNetwork) {
+
+                var cancel = function() {
+                    $modalInstance.close();
+                };
+
+                var connect = function() {
+                    console.log('connect');
+                };
+
+                //expose scope beans
+                $scope.wifiNetwork = wifiNetwork;
+
+                //expose scope methods
+                $scope.cancel = cancel;
+                $scope.connect = connect;
+
+                /**
+                 * constructor
+                 */
+                (function() {
+                    console.log('wifiModalController: ', wifiNetwork);
+                }());
             }
         ])
     }

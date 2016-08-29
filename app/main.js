@@ -13,6 +13,7 @@ require.config({
         'angular-animate': 'lib/angular-animate/angular-animate.min',
         'angular-css': 'lib/angular-css/angular-css.min',
         'angularjs-slider': 'lib/angularjs-slider/dist/rzslider.min',
+        'angular-virtual-keyboard': 'lib/angular-virtual-keyboard/release/angular-virtual-keyboard.min',
 
         'tween-max': 'lib/gsap/src/minified/TweenMax.min',
         'timeline-max': 'lib/gsap/src/minified/TimelineMax.min',
@@ -25,7 +26,7 @@ require.config({
         'lodash': 'lib/lodash/lodash.min'
     },
 
-    // Add angular modules that does not support AMD out of the box, put it in a shim
+    // Add angular modules that do not support AMD out of the box, put it in a shim
     shim: {
         'angular': {
             deps: ['jquery'],
@@ -49,6 +50,9 @@ require.config({
         'timeline-max' : ['tween-max'],
         'd3': {
             exports: 'd3'
+        },
+        'angular-virtual-keyboard': {
+            deps: ['angular']
         }
     },
 

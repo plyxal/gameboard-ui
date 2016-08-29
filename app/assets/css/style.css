@@ -2,6 +2,18 @@
   font-family: oratorStd;
   src: url("../fonts/OratorStd.otf");
 }
+/* line 1, ../../../scss/common/_colors.scss */
+.red {
+  color: #983333;
+}
+
+/* line 1, ../../../scss/elements/_input.scss */
+input {
+  border-radius: 0 !important;
+  broder: none !important;
+  padding-top: 11px !important;
+}
+
 /* line 2, ../../../scss/directive/_loader.scss */
 .loader .sk-folding-cube {
   margin: 20px auto;
@@ -446,12 +458,16 @@ html, body {
   background: rgba(127, 127, 127, 0.5);
 }
 /* line 4, ../../../scss/modal/_wifi.modal.scss */
+.wifi-modal .connect-to-container {
+  margin-bottom: 10px;
+}
+/* line 8, ../../../scss/modal/_wifi.modal.scss */
 .wifi-modal .plyxal-button {
   display: inline-block;
 }
-/* line 8, ../../../scss/modal/_wifi.modal.scss */
+/* line 12, ../../../scss/modal/_wifi.modal.scss */
 .wifi-modal .plyxal-button-inner {
-  padding: 10px;
+  padding: 10px 10px 5px 10px;
   color: white;
 }
 

@@ -24,7 +24,7 @@
 
         <!-- wifi -->
         <div class="section-header">
-            <div class="header-label">Wi-Fi : PKSIV-5g</div>
+            <div class="header-label">Wi-Fi : {{settingsModel.wifiConnectionState.connection == 'disconnected' ? 'Not Connected' : settingsModel.wifiConnectionState.ssid}}</div>
         </div>
         <div>
             <div class="section wifi-section">

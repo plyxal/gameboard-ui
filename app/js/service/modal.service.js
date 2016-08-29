@@ -20,6 +20,7 @@ define([
                         controller: 'wifiModalController',
                         backdrop: 'static',
                         size: 'md',
+                        animation: false,
                         resolve: {
                             wifiNetwork: function() {
                                 return wifiNetwork

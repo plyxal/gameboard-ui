@@ -26,7 +26,7 @@ define([
                                         '<div class="bar4"></div>' +
                                         '<div class="bar5"></div>' +
                                         '<div class="network-name">{{network.ssid}}</div>' +
-                                        '<div class="network-secure">{{network.security}}</div>' +
+                                        '<div class="network-secure">Security: {{listNetworks()}}</div>' +
                                     '</div>' +
                                 '</div>',
                     replace: true,
@@ -52,13 +52,16 @@ define([
                          * @param event
                          */
                         var interactionStart = function(event) {
-                            // console.log('button.directive::touchStartHander::event: ', event);
-
                             inner.addClass('interaction-start');
+
                             $(element).bind('touchend', interactionEnd);
                             $(element).bind('mouseup', interactionEnd);
                         };
 
+                        /**
+                         *
+                         * @param event
+                         */
                         var internalClickHandler = function(event) {
                             // console.log('internalClickHandler');
 
@@ -68,10 +71,9 @@ define([
                             }, 200);
                         };
 
-                        scope.interactionEnd = interactionEnd;
-                        scope.interactionStart = interactionStart;
-                        scope.internalClickHandler = internalClickHandler;
-
+                        /**
+                         *
+                         */
                         var setBars = function() {
                             if(scope.network.signal_level > 0)
                                 element.find('.bar1').css({opacity: 1});
@@ -88,6 +90,15 @@ define([
                             if(scope.network.signal_level > 80)
                                 element.find('.bar5').css({opacity: 1});
                         };
+
+                        var listNetworks = function() {
+                            return scope.network.security.replace(' ', ', ');
+                        };
+
+                        scope.interactionEnd = interactionEnd;
+                        scope.interactionStart = interactionStart;
+                        scope.internalClickHandler = internalClickHandler;
+                        scope.listNetworks = listNetworks;
 
                         /**
                          * @constructor

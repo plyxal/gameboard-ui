@@ -35,6 +35,7 @@ define([
                     settingsService.getVolume()
                         .then(settingsService.getBrightness, settingsService.getBrightness)
                         .then(settingsService.getWifiNetworks, settingsService.getWifiNetworks)
+                        .then(settingsService.getWifiConnectionState, settingsService.getWifiConnectionState)
                         .then(done, done);
 
                     return deferred.promise;

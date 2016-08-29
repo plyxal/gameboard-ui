@@ -51,9 +51,12 @@ define([
                     settingsService.putBrightness(value)
                 };
 
+                /**
+                 *
+                 * @param network
+                 */
                 var wifiClickHandler = function(network) {
-                    console.log('wifiClickHandler: ', network);
-                    modalService.showWifiConnectionModal();
+                    modalService.showWifiConnectionModal(network);
                 };
 
                 volumeSliderModel.onEnd = volumeSliderEnd;
@@ -71,7 +74,11 @@ define([
                     settingsService.getVolume()
                         .then(settingsService.getBrightness)
                         .then(refreshSliders)
-                        .then(settingsService.getWifiNetworks);
+                        .then(settingsService.getWifiNetworks)
+                        .then(settingsService.getWifiConnectionState)
+                        .then(settingsService.startPollingNetworks);
+
+                    $scope.$on('$destroy', settingsService.stopPollingNetworks);
                 }());
 
                 //expose scope props

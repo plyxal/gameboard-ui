@@ -91,12 +91,39 @@ define([
                         .then(success, fail);
                 };
 
+                var getWifiConnectionState = function() {
+                    var success = function(result) {
+                        settingsModel.wifiConnectionState = result.data.state;
+                    };
+
+                    var fail = function(error) {
+                        console.log('getWifiConnectionState::fail: ', error);
+                    };
+
+                    serviceLocator.getWifiConnectionState()
+                        .then(success, fail);
+                };
+
+                var pollingInterval;
+                var startPollingNetworks = function() {
+                    console.log('startPollingNetworks');
+                    pollingInterval = setInterval(getWifiNetworks, 10000);
+                };
+
+                var stopPollingNetworks = function() {
+                    console.log('stopPollingNetworks');
+                    clearInterval(pollingInterval);
+                };
+
                 return {
                     getVolume: getVolume,
                     putVolume: putVolume,
                     getBrightness: getBrightness,
                     putBrightness: putBrightness,
-                    getWifiNetworks: getWifiNetworks
+                    getWifiNetworks: getWifiNetworks,
+                    getWifiConnectionState: getWifiConnectionState,
+                    startPollingNetworks: startPollingNetworks,
+                    stopPollingNetworks: stopPollingNetworks
                 }
             }
         ])

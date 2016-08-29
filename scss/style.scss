@@ -1,6 +1,9 @@
 @import 'compass';
 
 @import 'common/fonts';
+@import 'common/colors';
+
+@import 'elements/input';
 
 @import 'directive/loader';
 @import 'directive/wifi.signal';

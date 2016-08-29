@@ -77,6 +77,13 @@ define([
                     return $http.get(baseUrl + '/wifi/networks');
                 };
 
+                /**
+                 *
+                 */
+                var getWifiConnectionState = function() {
+                    return $http.get(baseUrl + '/wifi/state');
+                };
+
                 return {
                     getGames: getGames,
                     launch: launch,
@@ -84,7 +91,8 @@ define([
                     putVolume: putVolume,
                     getBrightness: getBrightness,
                     putBrightness: putBrightness,
-                    getWifiNetworks: getWifiNetworks
+                    getWifiNetworks: getWifiNetworks,
+                    getWifiConnectionState: getWifiConnectionState
                 }
             }
         ])

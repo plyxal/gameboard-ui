@@ -19,6 +19,7 @@ define([
         'angular-animate',
         'angular-css',
         'angularjs-slider',
+        'angular-virtual-keyboard',
 
         'js/controller/app.controller',
         'js/directive/loader.directive',
@@ -32,8 +33,9 @@ define([
             'ngRoute',
             'ui.bootstrap',
             'ngAnimate',
-            'door3.css',
-            'rzModule'
+            'angularCSS',
+            'rzModule',
+            'angular-virtual-keyboard'
         ], null);
 
         app.config([

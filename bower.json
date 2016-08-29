@@ -4,7 +4,7 @@
   "dependencies": {
     "angular-animate": "~1.4.4",
     "angular-bootstrap": "~0.13.3",
-    "angular-css": "~1.0.7",
+    "angular-css": "^1.0.8",
     "angular-route": "~1.4.3",
     "angularAMD": "~0.2.1",
     "angularjs": "~1.4.3",
@@ -14,7 +14,8 @@
     "jquery": "~2.1.4",
     "lodash": "~3.10.1",
     "requirejs": "~2.1.20",
-    "angularjs-slider": "~2.8.0"
+    "angularjs-slider": "~2.8.0",
+    "angular-virtual-keyboard": "^0.4.3"
   },
   "resolutions": {
     "angular": "^1.4.5"

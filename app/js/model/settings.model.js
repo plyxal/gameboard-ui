@@ -11,11 +11,13 @@ define([
             var volume;
             var brightness;
             var wifiNetworks;
+            var wifiConnectionState;
 
             return {
                 volume: volume,
                 brightness: brightness,
-                wifiNetworks: wifiNetworks
+                wifiNetworks: wifiNetworks,
+                wifiConnectionState: wifiConnectionState
             }
         })
     }
