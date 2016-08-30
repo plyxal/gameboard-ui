@@ -1,0 +1,59 @@
+.keyboardInputMaster {
+  margin-left: 1px;
+  margin-top: -3px !important;
+  border-radius: 0 !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  border: solid 1px #999999 !important;
+
+  thead {
+    display: none;
+  }
+
+  .keyboardsArea {
+    border-radius: 0 !important;
+
+    padding: 10px 10px;
+
+    background-color: rgba(127, 127, 127, 0.5) !important;
+  }
+
+  table {
+    border-spacing: 5px 2.5px !important;
+  }
+
+  td {
+    border-radius: 0 !important;
+    border: none !important;
+    background-color: rgba(0, 0, 0, 0.25) !important;
+
+    color: white !important;
+    font-size: 22px !important;
+
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+
+  .keyboardInputTextPad {
+    border: none !important;
+    background: none !important;
+
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+
+    input {
+      display: none !important;
+    }
+  }
+
+  tr {
+    border-collapse: collapse !important;
+  }
+
+
+
+  .space {
+    width: 300px !important;
+  }
+}

@@ -14,8 +14,9 @@ define([
             'gameModel',
             'serviceLocator',
             'settingsModel',
+            '$q',
 
-            function(gameModel, serviceLocator, settingsModel) {
+            function(gameModel, serviceLocator, settingsModel, $q) {
                 /**
                  *
                  */
@@ -91,28 +92,47 @@ define([
                         .then(success, fail);
                 };
 
-                var getWifiConnectionState = function() {
-                    var success = function(result) {
-                        settingsModel.wifiConnectionState = result.data.state;
-                    };
-
-                    var fail = function(error) {
-                        console.log('getWifiConnectionState::fail: ', error);
-                    };
-
-                    serviceLocator.getWifiConnectionState()
-                        .then(success, fail);
-                };
-
                 var pollingInterval;
                 var startPollingNetworks = function() {
-                    console.log('startPollingNetworks');
                     pollingInterval = setInterval(getWifiNetworks, 10000);
                 };
 
                 var stopPollingNetworks = function() {
-                    console.log('stopPollingNetworks');
                     clearInterval(pollingInterval);
+                };
+
+                var getWifiConnectionState = function() {
+                    var success = function(result) {
+                        settingsModel.wifiConnectionState = result.data.state;
+
+                        return;
+                    };
+
+                    var fail = function(error) {
+                        console.log('getWifiConnectionState::fail: ', error);
+
+                        return $q.reject();
+                    };
+
+                    return serviceLocator.getWifiConnectionState()
+                        .then(success, fail);
+                };
+
+                var connectWifi = function(accessPoint) {
+                    var success = function(result) {
+                        settingsModel.wifiConnectionState = result.data.accessPoint;
+
+                        return;
+                    };
+
+                    var fail = function(error) {
+                        console.log('connectWifi::fail::error: ', error);
+
+                        return $q.reject();
+                    };
+
+                    return serviceLocator.postConnectWifi(accessPoint)
+                        .then(success, fail);
                 };
 
                 return {
@@ -123,7 +143,8 @@ define([
                     getWifiNetworks: getWifiNetworks,
                     getWifiConnectionState: getWifiConnectionState,
                     startPollingNetworks: startPollingNetworks,
-                    stopPollingNetworks: stopPollingNetworks
+                    stopPollingNetworks: stopPollingNetworks,
+                    connectWifi: connectWifi
                 }
             }
         ])

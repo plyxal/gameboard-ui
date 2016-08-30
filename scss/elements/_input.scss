@@ -3,3 +3,10 @@ input {
   broder: none !important;
   padding-top: 11px !important;
 }
+
+.form-control:focus {
+  border-color: #999999 !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}

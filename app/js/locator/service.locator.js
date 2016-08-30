@@ -84,6 +84,10 @@ define([
                     return $http.get(baseUrl + '/wifi/state');
                 };
 
+                var postConnectWifi = function(accessPoint) {
+                    return $http.post(baseUrl + '/wifi/connect', accessPoint);
+                };
+
                 return {
                     getGames: getGames,
                     launch: launch,
@@ -92,7 +96,8 @@ define([
                     getBrightness: getBrightness,
                     putBrightness: putBrightness,
                     getWifiNetworks: getWifiNetworks,
-                    getWifiConnectionState: getWifiConnectionState
+                    getWifiConnectionState: getWifiConnectionState,
+                    postConnectWifi: postConnectWifi
                 }
             }
         ])

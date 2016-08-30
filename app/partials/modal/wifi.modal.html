@@ -4,10 +4,10 @@
     </div>
     <div class="modal-body">
         <div class="connect-to-container"><span>SSID:&nbsp;</span><span>{{wifiNetwork.ssid}}</span></div>
-        <form name="wifiForm" class="vertical-form form-inline" novalidate>
+        <form name="wifiForm" class="vertical-form form-inline" ng-submit="connect()" novalidate>
             <span>Password:</span>
-            <input id="password" name="password" class="form-control" placeholder="password"
-                   ng-model="connectionModel.password" type="password" required ng-virtual-keyboard>
+            <input id="password" name="password" class="form-control password-input" placeholder="password"
+                   ng-model="accessPoint.password" type="password" required ng-virtual-keyboard>
         </form>
     </div>
     <div class="modal-footer">

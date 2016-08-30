@@ -14,6 +14,14 @@ input {
   padding-top: 11px !important;
 }
 
+/* line 7, ../../../scss/elements/_input.scss */
+.form-control:focus {
+  border-color: #999999 !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
 /* line 2, ../../../scss/directive/_loader.scss */
 .loader .sk-folding-cube {
   margin: 20px auto;
@@ -196,6 +204,60 @@ input {
   font-size: 16px;
 }
 
+/* line 1, ../../../scss/directive/_keyboard.scss */
+.keyboardInputMaster {
+  margin-left: 1px;
+  margin-top: -3px !important;
+  border-radius: 0 !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  border: solid 1px #999999 !important;
+}
+/* line 10, ../../../scss/directive/_keyboard.scss */
+.keyboardInputMaster thead {
+  display: none;
+}
+/* line 14, ../../../scss/directive/_keyboard.scss */
+.keyboardInputMaster .keyboardsArea {
+  border-radius: 0 !important;
+  padding: 10px 10px;
+  background-color: rgba(127, 127, 127, 0.5) !important;
+}
+/* line 22, ../../../scss/directive/_keyboard.scss */
+.keyboardInputMaster table {
+  border-spacing: 5px 2.5px !important;
+}
+/* line 26, ../../../scss/directive/_keyboard.scss */
+.keyboardInputMaster td {
+  border-radius: 0 !important;
+  border: none !important;
+  background-color: rgba(0, 0, 0, 0.25) !important;
+  color: white !important;
+  font-size: 22px !important;
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+}
+/* line 38, ../../../scss/directive/_keyboard.scss */
+.keyboardInputMaster .keyboardInputTextPad {
+  border: none !important;
+  background: none !important;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+/* line 45, ../../../scss/directive/_keyboard.scss */
+.keyboardInputMaster .keyboardInputTextPad input {
+  display: none !important;
+}
+/* line 50, ../../../scss/directive/_keyboard.scss */
+.keyboardInputMaster tr {
+  border-collapse: collapse !important;
+}
+/* line 56, ../../../scss/directive/_keyboard.scss */
+.keyboardInputMaster .space {
+  width: 300px !important;
+}
+
 /* line 1, ../../../scss/directive/control/_plyxal.button.scss */
 .plyxal-button {
   position: relative;
@@ -352,25 +414,26 @@ html, body {
 
 /* line 106, ../../../scss/view/_base.view.scss */
 .fade.ng-enter {
-  opacity: 1;
-  z-index: -1;
+  opacity: 0;
+  transition: opacity .2s linear;
+  transition-delay: .2s;
 }
 
-/* line 113, ../../../scss/view/_base.view.scss */
+/* line 114, ../../../scss/view/_base.view.scss */
 .fade.ng-enter-active {
   opacity: 1;
 }
 
-/* line 117, ../../../scss/view/_base.view.scss */
+/* line 118, ../../../scss/view/_base.view.scss */
 .fade.ng-leave {
   opacity: 1;
-  transition: opacity .1s ease;
-  transition-delay: 2s;
+  transition: opacity .1s linear;
+  transition-delay: 5s;
 }
 
-/* line 125, ../../../scss/view/_base.view.scss */
+/* line 126, ../../../scss/view/_base.view.scss */
 .fade.ng-leave-active {
-  opacity: 1;
+  opacity: 0;
 }
 
 /* line 1, ../../../scss/view/_settings.view.scss */
@@ -382,7 +445,7 @@ html, body {
   position: absolute;
   width: 1920px;
   height: 1080px;
-  background-image: url("../images/logo.png");
+  background-image: url("../images/logo3.png");
 }
 /* line 13, ../../../scss/view/_settings.view.scss */
 .settings-view .content-area {
@@ -400,45 +463,46 @@ html, body {
 .settings-view .page-header {
   font-size: 32px;
   color: #983333;
+  border-bottom: solid 1px #999999;
   margin: 0px 0px 50px 0px;
 }
-/* line 35, ../../../scss/view/_settings.view.scss */
+/* line 37, ../../../scss/view/_settings.view.scss */
 .settings-view .section-header {
   margin-bottom: 10px;
   display: inline-block;
   color: #983333;
 }
-/* line 44, ../../../scss/view/_settings.view.scss */
+/* line 46, ../../../scss/view/_settings.view.scss */
 .settings-view .section-header .header-label {
   position: relative;
   top: 4px;
 }
-/* line 50, ../../../scss/view/_settings.view.scss */
+/* line 52, ../../../scss/view/_settings.view.scss */
 .settings-view .section {
   margin-bottom: 50px;
   display: inline-block;
   color: white;
 }
-/* line 60, ../../../scss/view/_settings.view.scss */
+/* line 62, ../../../scss/view/_settings.view.scss */
 .settings-view .wifi-section {
   width: 980px;
   height: 290px;
   padding: 10px;
 }
-/* line 66, ../../../scss/view/_settings.view.scss */
+/* line 68, ../../../scss/view/_settings.view.scss */
 .settings-view .wifi-section .network-item {
   margin: 10px;
   display: inline-block;
 }
-/* line 73, ../../../scss/view/_settings.view.scss */
+/* line 75, ../../../scss/view/_settings.view.scss */
 .settings-view .volume-section {
   width: 300px;
 }
 
 /* line 1, ../../../scss/modal/_base.modal.scss */
 .modal-backdrop {
-  opacity: .25 !important;
-  background: black !important;
+  opacity: .5 !important;
+  background: white !important;
 }
 
 /* line 6, ../../../scss/modal/_base.modal.scss */
