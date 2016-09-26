@@ -1,17 +1,19 @@
 <div class="wifi-modal">
     <div class="modal-header red">
-        Wifi Settings
+        <div class="modal-header-label">Connect to WiFi Network</div>
+        <div class="connecting-label" ng-show="connecting">connecting&nbsp;</div>
+        <loader class="connection-loader" ng-show="connecting"></loader>
     </div>
     <div class="modal-body">
-        <div class="connect-to-container"><span>SSID:&nbsp;</span><span>{{wifiNetwork.ssid}}</span></div>
+        <div class="connect-to-container"><span>Network Id:&nbsp;</span><span>{{wifiNetwork.ssid}}</span></div>
         <form name="wifiForm" class="vertical-form form-inline" ng-submit="connect()" novalidate>
             <span>Password:</span>
             <input id="password" name="password" class="form-control password-input" placeholder="password"
-                   ng-model="accessPoint.password" type="password" required ng-virtual-keyboard>
+                   ng-model="accessPoint.password" type="password" required ng-virtual-keyboard="{enterSubmit:connect}">
         </form>
     </div>
     <div class="modal-footer">
-        <plyxal-button label="'Cancel'" ng-click="cancel()"></plyxal-button>
-        <plyxal-button label="'Connect'" ng-click="connect()"></plyxal-button>
+        <plyxal-button label="'Cancel'" ng-click="cancel()" disabled="connecting"></plyxal-button>
+        <plyxal-button label="'Connect'" ng-click="connect()" disabled="connecting"></plyxal-button>
     </div>
 </div>

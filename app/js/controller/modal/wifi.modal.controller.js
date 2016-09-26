@@ -23,8 +23,12 @@ define([
                 };
 
                 var connect = function() {
+                    $scope.connecting = true;
+
                     var success = function() {
                         console.log('!!!!!!!!!! success');
+                        $scope.connecting = false;
+
                         $modalInstance.close();
                     };
 
@@ -42,6 +46,7 @@ define([
                 //expose scope methods
                 $scope.cancel = cancel;
                 $scope.connect = connect;
+                $scope.connecting = false;
 
                 $scope.accessPoint =  {
                     ssid: wifiNetwork.ssid,
@@ -55,9 +60,9 @@ define([
                     console.log('wifi.modal.controller:constructor: ', wifiNetwork);
 
                     //hack!
-                    setTimeout(function() {
-                        $('.password-input').focus();
-                    }, 0);
+                    // setTimeout(function() {
+                    //
+                    // }, 0);
                 }());
             }
         ])

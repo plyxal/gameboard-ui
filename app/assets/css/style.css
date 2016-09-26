@@ -7,6 +7,12 @@
   color: #983333;
 }
 
+/* line 1, ../../../scss/common/_disabled.scss */
+.disabled {
+  pointer-events: none;
+  opacity: .5;
+}
+
 /* line 1, ../../../scss/elements/_input.scss */
 input {
   border-radius: 0 !important;
@@ -206,7 +212,7 @@ input {
 
 /* line 1, ../../../scss/directive/_keyboard.scss */
 .keyboardInputMaster {
-  margin-left: 1px;
+  margin-left: 1px !important;
   margin-top: -3px !important;
   border-radius: 0 !important;
   -webkit-box-shadow: none !important;
@@ -519,31 +525,51 @@ html, body {
 /* line 18, ../../../scss/modal/_base.modal.scss */
 .modal-header {
   padding-bottom: 5px;
+  height: 52px !important;
 }
 
-/* line 22, ../../../scss/modal/_base.modal.scss */
+/* line 23, ../../../scss/modal/_base.modal.scss */
 .modal-content {
   border-radius: 0 !important;
   -webkit-box-shadow: 0 3px 9px transparent;
   box-shadow: 0 3px 9px transparent;
 }
 
-/* line 2, ../../../scss/modal/_wifi.modal.scss */
+/* line 1, ../../../scss/modal/_wifi.modal.scss */
+.wifi-modal {
+  position: relative;
+}
+/* line 4, ../../../scss/modal/_wifi.modal.scss */
 .wifi-modal .connect-to-container {
   margin-bottom: 10px;
 }
-/* line 6, ../../../scss/modal/_wifi.modal.scss */
+/* line 8, ../../../scss/modal/_wifi.modal.scss */
 .wifi-modal .plyxal-button {
   display: inline-block;
 }
-/* line 10, ../../../scss/modal/_wifi.modal.scss */
+/* line 12, ../../../scss/modal/_wifi.modal.scss */
 .wifi-modal .plyxal-button-inner {
   padding: 10px 10px 5px 10px;
   color: white;
   background-color: #909090;
 }
+/* line 18, ../../../scss/modal/_wifi.modal.scss */
+.wifi-modal .modal-header {
+  display: flex;
+}
+/* line 22, ../../../scss/modal/_wifi.modal.scss */
+.wifi-modal .modal-header-label {
+  flex-grow: 2;
+}
+/* line 26, ../../../scss/modal/_wifi.modal.scss */
+.wifi-modal .sk-folding-cube {
+  position: relative;
+  top: -20px;
+  width: 20px !important;
+  height: 20px !important;
+}
 
-/* line 17, ../../../scss/modal/_wifi.modal.scss */
+/* line 34, ../../../scss/modal/_wifi.modal.scss */
 .modal-content {
   margin-top: 405px;
 }

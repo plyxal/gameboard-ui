@@ -94,7 +94,7 @@ define([
 
                 var pollingInterval;
                 var startPollingNetworks = function() {
-                    pollingInterval = setInterval(getWifiNetworks, 10000);
+                    pollingInterval = setInterval(getWifiNetworks, 5000);
                 };
 
                 var stopPollingNetworks = function() {

@@ -18,9 +18,10 @@ define([
                     scope: {
                         'image': '=?image',
                         'clickHandler': '&clickHandler',
-                        'label': '=?label'
+                        'label': '=?label',
+                        'disabled': '=?disabled'
                     },
-                    template:   '<div class="plyxal-button">' +
+                    template:   '<div class="plyxal-button" ng-class="{disabled: disabled}">' +
                                     '<div class="plyxal-button-inner" ng-click="internalClickHandler($event)" style="background-image: url(\'{{image}}\')">{{label}}</div>' +
                                 '</div>',
                     replace: true,
