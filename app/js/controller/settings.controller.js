@@ -59,9 +59,11 @@ define([
                     modalService.showWifiConnectionModal(network);
                 };
 
+                //configure slider handlers
                 volumeSliderModel.onEnd = volumeSliderEnd;
                 brightnessSliderModel.onEnd = brightnessSliderEnd;
 
+                //expose scope methods
                 $scope.wifiClickHandler = wifiClickHandler;
 
                 /**
