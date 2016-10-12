@@ -43,7 +43,7 @@ define([
                  * @constructor
                  */
                 (function() {
-                    console.log('game.service::constructor');
+                    // console.log('game.service::constructor');
                 }());
 
                 return {

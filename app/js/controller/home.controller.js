@@ -16,7 +16,7 @@ define([
                  * constructor
                  */
                 (function() {
-                    console.log('home.controller::constructor');
+                    // console.log('home.controller::constructor');
                 }());
             }
         ])

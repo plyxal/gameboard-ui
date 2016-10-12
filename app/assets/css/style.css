@@ -403,7 +403,7 @@ html, body {
 }
 
 /* line 83, ../../../scss/view/_base.view.scss */
-.fade {
+.view-container.fade {
   position: absolute;
   top: 0;
   left: 0;
@@ -419,26 +419,26 @@ html, body {
 }
 
 /* line 106, ../../../scss/view/_base.view.scss */
-.fade.ng-enter {
+.view-container.fade.ng-enter {
   opacity: 0;
   transition: opacity .2s linear;
   transition-delay: .2s;
 }
 
 /* line 114, ../../../scss/view/_base.view.scss */
-.fade.ng-enter-active {
+.view-container.fade.ng-enter-active {
   opacity: 1;
 }
 
 /* line 118, ../../../scss/view/_base.view.scss */
-.fade.ng-leave {
+.view-container.fade.ng-leave {
   opacity: 1;
   transition: opacity .1s linear;
   transition-delay: 5s;
 }
 
 /* line 126, ../../../scss/view/_base.view.scss */
-.fade.ng-leave-active {
+.view-container.fade.ng-leave-active {
   opacity: 0;
 }
 
@@ -451,7 +451,7 @@ html, body {
   position: absolute;
   width: 1920px;
   height: 1080px;
-  background-image: url("../images/logo3.png");
+  background-image: url("../images/logo.png");
 }
 /* line 13, ../../../scss/view/_settings.view.scss */
 .settings-view .content-area {

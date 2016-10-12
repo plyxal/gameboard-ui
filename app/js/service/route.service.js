@@ -46,7 +46,7 @@ define([
                  * @constructor
                  */
                 (function() {
-                    console.log('route.service::constructor');
+                    // console.log('route.service::constructor');
 
                     //prevent initial route change
                     var listen = $rootScope.$on('$locationChangeStart', function(event) {

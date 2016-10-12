@@ -26,7 +26,6 @@ define([
                     $scope.connecting = true;
 
                     var success = function() {
-                        console.log('!!!!!!!!!! success');
                         $scope.connecting = false;
 
                         $modalInstance.close();
@@ -57,12 +56,7 @@ define([
                  * constructor
                  */
                 (function() {
-                    console.log('wifi.modal.controller:constructor: ', wifiNetwork);
-
-                    //hack!
-                    // setTimeout(function() {
-                    //
-                    // }, 0);
+                    // console.log('wifi.modal.controller:constructor: ', wifiNetwork);
                 }());
             }
         ])

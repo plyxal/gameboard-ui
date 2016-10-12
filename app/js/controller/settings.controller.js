@@ -68,7 +68,7 @@ define([
                  * constructor
                  */
                 (function() {
-                    console.log('settings.controller::constructor');
+                    // console.log('settings.controller::constructor');
 
                     //load settings data
                     settingsService.getVolume()

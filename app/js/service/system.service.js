@@ -19,7 +19,7 @@ define([
                  */
                 var launchGame = function() {
                     var success = function(result) {
-                        console.log('system.service::launchGame::success: ', result);
+                        // console.log('system.service::launchGame::success: ', result);
                     };
 
                     var fail = function(error) {

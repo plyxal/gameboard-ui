@@ -104,7 +104,8 @@ define([
                          * @constructor
                          */
                         (function() {
-                            console.log('nav.directive::constructor');
+                            // console.log('nav.directive::constructor');
+
                             setBars();
 
                             $(element).bind('touchstart', interactionStart);

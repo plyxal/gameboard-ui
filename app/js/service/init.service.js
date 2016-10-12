@@ -81,7 +81,7 @@ define([
                  * @constructor
                  */
                 (function() {
-                    console.log('init.service::constructor');
+                    // console.log('init.service::constructor');
                 }());
 
                 return {

@@ -34,7 +34,7 @@ define([
                  * constructor
                  */
                 (function() {
-                    console.log('app.controller::constructor');
+                    // console.log('app.controller::constructor');
                 }());
 
                 //expose scope props/functions
