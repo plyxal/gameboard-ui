@@ -447,60 +447,55 @@ html, body {
   width: 1920px;
 }
 /* line 5, ../../../scss/view/_settings.view.scss */
-.settings-view .background {
-  position: absolute;
-  width: 1920px;
-  height: 1080px;
-  background-image: url("../images/logo.png");
-}
-/* line 13, ../../../scss/view/_settings.view.scss */
 .settings-view .content-area {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 1920px;
   padding: 50px 50px 50px 280px;
 }
-/* line 19, ../../../scss/view/_settings.view.scss */
+/* line 14, ../../../scss/view/_settings.view.scss */
 .settings-view .section-base, .settings-view .section-header, .settings-view .section {
   width: auto;
   padding: 10px;
   background-color: rgba(127, 127, 127, 0.5);
 }
-/* line 27, ../../../scss/view/_settings.view.scss */
+/* line 22, ../../../scss/view/_settings.view.scss */
 .settings-view .page-header {
   font-size: 32px;
   color: #983333;
   border-bottom: solid 1px #999999;
   margin: 0px 0px 50px 0px;
 }
-/* line 37, ../../../scss/view/_settings.view.scss */
+/* line 32, ../../../scss/view/_settings.view.scss */
 .settings-view .section-header {
   margin-bottom: 10px;
   display: inline-block;
   color: #983333;
 }
-/* line 46, ../../../scss/view/_settings.view.scss */
+/* line 41, ../../../scss/view/_settings.view.scss */
 .settings-view .section-header .header-label {
   position: relative;
   top: 4px;
 }
-/* line 52, ../../../scss/view/_settings.view.scss */
+/* line 47, ../../../scss/view/_settings.view.scss */
 .settings-view .section {
   margin-bottom: 50px;
   display: inline-block;
   color: white;
 }
-/* line 62, ../../../scss/view/_settings.view.scss */
+/* line 57, ../../../scss/view/_settings.view.scss */
 .settings-view .wifi-section {
   width: 980px;
   height: 290px;
   padding: 10px;
 }
-/* line 68, ../../../scss/view/_settings.view.scss */
+/* line 63, ../../../scss/view/_settings.view.scss */
 .settings-view .wifi-section .network-item {
   margin: 10px;
   display: inline-block;
 }
-/* line 75, ../../../scss/view/_settings.view.scss */
+/* line 70, ../../../scss/view/_settings.view.scss */
 .settings-view .volume-section {
   width: 300px;
 }

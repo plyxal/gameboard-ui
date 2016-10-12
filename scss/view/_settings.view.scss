@@ -2,16 +2,11 @@
 
   width: 1920px;
 
-  .background {
-    position: absolute;
-    width: 1920px;
-    height: 1080px;
-
-    background-image: url('../images/logo.png');
-  }
-
   .content-area {
     position: absolute;
+    top: 0;
+    left: 0;
+
     width: 1920px;
     padding: 50px 50px 50px 280px;
   }
